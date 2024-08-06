@@ -41,6 +41,8 @@ Protocol:
 
 This github repository accompanies a publication in preparation.
 
+Softwares used: pandas, MDTraj, MDAnalysis, Matplotlib****
+
 *PyMOL Reference: The PyMOL Molecular Graphics System, Version 2.5.8 Schrödinger, LLC.
 
 ** Gromacs References:
@@ -62,6 +64,15 @@ This github repository accompanies a publication in preparation.
 5. Duan, Y., Wu, C., Chowdhury, S., Lee, M.C., Xiong, G., Zhang, W., Yang, R., Cieplak, P., Luo, R., Lee, T., et al. (2003). A point-charge force field for molecular mechanics simulations of proteins based on condensed-phase quantum mechanical calculations. J. Comput. Chem. 24, 1999–2012.
 6.(http://q4md- forcefieldtools.org/REDServer/).
 7. Wang, J., Wolf, R.M., Caldwell, J.W., Kollman, P.A., and Case, D.A. (2004). Development and testing of a general amber force field. J. Comput. Chem. 25, 1157–1174.
+
+****Citations softwares:
+1. The pandas development team. pandas-dev/pandas: Pandas (2020) Zenodo, https://doi.org/10.5281/zenodo.3509134
+2. McKinney, W. Data Structures for Statistical Computing in Python, Proceedings of the 9th Python in Science Conference (2010), 56-61
+3. McGibbon, R. T., Beauchamp, K. A., Harrigan, M. P., Klein, C., Swails, J. M., Hernández, C. X., Schwantes, C. R., Wang, L.-P., Lane, T. J., and Pande, V. S. (2015). MDTraj: A Modern Open Library for the Analysis of Molecular Dynamics Trajectories. Biophysical Journal. 109, 8, 1528-1532.
+4. R. J. Gowers, M. Linke, J. Barnoud, T. J. E. Reddy, M. N. Melo, S. L. Seyler, D. L. Dotson, J. Domanski, S. Buchoux, I. M. Kenney, and O. Beckstein. MDAnalysis: A Python package for the rapid analysis of molecular dynamics simulations. In S. Benthall and S. Rostrup, editors, Proceedings of the 15th Python in Science Conference, pages 98-105, Austin, TX, 2016. SciPy, doi:10.25080/majora-629e541a-00e.
+5. N. Michaud-Agrawal, E. J. Denning, T. B. Woolf, and O. Beckstein. MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations. J. Comput. Chem. 32 (2011), 2319-2327, doi:10.1002/jcc.21787. PMCID:PMC3144279
+6. J. D. Hunter, "Matplotlib: A 2D Graphics Environment", Computing in Science & Engineering, vol. 9, no. 3, pp. 90-95, 2007.
+
 
 
 ![3-strand double helix construct image](https://github.com/martagu/rna_modify_MD_analyze/blob/main/samplefiles/md1pdb.png?raw=true)
