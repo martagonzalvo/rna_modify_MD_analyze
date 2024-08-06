@@ -54,3 +54,5 @@ References:
 5. Duan, Y., Wu, C., Chowdhury, S., Lee, M.C., Xiong, G., Zhang, W., Yang, R., Cieplak, P., Luo, R., Lee, T., et al. (2003). A point-charge force field for molecular mechanics simulations of proteins based on condensed-phase quantum mechanical calculations. J. Comput. Chem. 24, 1999–2012.
 6.(http://q4md- forcefieldtools.org/REDServer/).
 7. Wang, J., Wolf, R.M., Caldwell, J.W., Kollman, P.A., and Case, D.A. (2004). Development and testing of a general amber force field. J. Comput. Chem. 25, 1157–1174.
+
+![3-strand double helix construct image](https://github.com/martagu/rna_modify_MD_analyze/blob/main/samplefiles/md1pdb.png?raw=true)
