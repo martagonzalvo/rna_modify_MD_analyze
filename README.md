@@ -2,50 +2,58 @@ Author: Marta Gonzalvo
 
 Project goal: understand siRNA structures through simulation
 
-Approach: Build rna structures with modified and unnatural residues (2'-O-methyl [2'OMe], locked nucleic acids [LNA], phosphorothioate [PS]) , run molecular dynamics simulations and analyze impact of different sequences on structure and stability
+Approach: Build RNA structures with modified and unnatural residues (2'-O-methyl [2'OMe], locked nucleic acids [LNA], phosphorothioate [PS]), run molecular dynamics simulations, and analyze impact of different sequences on structure and stability
 
 
-siRNA of interest is constituted of one long core strand and two shorter sensor and guide strands that both base pair with core strand. They form 2 double helices.
+The siRNA of interest is comprised of one long core strand, and two shorter sensor and guide strands that both base pair with core strand. They form 2 double helices. Sample image included below.
 
 Protocol:
 
-1. 2 A-form DNA double helices are created using PyMOL's builder tool. Other options including ROSETTA were explored, PyMOL was found to work best to start helices in regular conformation and stable in MD since later need to join them. Sample structures: helix1.pdb, helix2.pdb
+1. 2 A-form DNA double helices are created using PyMOL's* builder tool. Sample structures: helix1.pdb, helix2.pdb
 
-2. The two helices are manually joined in single file and pulled close together with the right alignment for merger in later steps. Linker C3 is also added manually (RL residue 2 manually changed name to be part of previous residue). Chains are manually reordered in pdb to have each A,B,C chain sequentially.  Intermediate structure: mergedstructures.pdb. Sample structure: duplex.pdb
+2. The two helices are manually joined in single file and pulled close together with the right alignment for merging them. The linker C3 is also added manually. Then, the chains are manually reordered in pdb to have each A,B,C chain sequentially. The RL residue 2 is then renamed to become part of the adjacent residue (-22). Intermediate structure: mergedstructures.pdb. Sample final structure: duplex.pdb
 
 
-3. Structures are modified and gromacs folders are created and run with subst_prep.py based on parameters in json file. Sample json file: simulations.json. Sample final folder: foldersimulation.
+3. The modifications are substituted into the structures and folders are created for each simulation with subst_prep.py based on parameters in json file. Sample json file: simulations.json. Sample final folder: foldersimulation.
 
-This involves a few major steps:
+        This involves a few major steps:
 
-- Substituting monomers in place with substnucl_wholefile.py (depends on functions in substnucl.py, needs file describing modifications+RNA residues, sample: substitute.txt, monomers in monomer_struct)
-- Run solvation, adding ions using Gromacs: Using modified force field for modified and non-standard residues*
-- Creating .mdp files with correct and desired constraints (depends on biashbond_rna.py, very customized hard-coded file)
+            - Substituting monomers in place with substnucl_wholefile.py (depends on functions in substnucl.py, needs file describing modifications+RNA residues, sample: substitute.txt, monomers in monomer_struct)
+            - Run solvation, adding ions using Gromacs**: Using modified force field for modified and non-standard residues***
+            - Creating .mdp files with correct and desired constraints (depends on biashbond_rna.py, customized hard-coded file)
 
--- Command: python subst_prep.py samplefiles/simulations.json samplefiles (script is also hard-coded)
+    -- Command: python subst_prep.py samplefiles/simulations.json samplefiles (script is also hard-coded)
 
-4. Equilibration and production molecular dynamics are run using gromacs. Sample script: runsimulation.sh in foldersimulation. 
+4. Equilibration and production molecular dynamics are run using Gromacs. Sample script: runsimulation.sh. 
 
-- Will generate xtc, other standard gromacs files. Then pdb of non-water atoms is generated from xtc with a command similar to: 
-    gmx trjconv -f md.xtc -s md.gro -o md.pdb -pbc nojump
-    Sample pdb: md.pdb
+    - Will generate xtc, other standard gromacs files. Then pdb of non-water atoms is generated from xtc with a command similar to: 
+        gmx trjconv -f md.xtc -s md.gro -o md.pdb -pbc nojump
+        Sample pdb: md.pdb
 
 5. Results are analyzed from trajectory pdbs:
 
-5a) First, a csv is generated with the values of structural measures of interest at every timestep in the output pdbs using analysis.py. Outputs certain coordinates, distances and angles, hardcoded into file. Sample output: summary_result1.csv
---- Command: python analysis.py samplefiles/results samplefiles/templatefolder
+    5a) First, a csv is generated with the values of structural measures of interest at every timestep in the output pdbs using analysis.py. Outputs certain coordinates, distances and angles, hardcoded into the file. Sample output: summary_result1.csv
+    --- Command: python analysis.py samplefiles/results samplefiles/templatefolder
 
-5b) The csv results are visualized for one or more simulations using visualiz_analysis.py. Types of files is hardcoded. Sample plot 5 simulations: rmsd5simulations.png
---- Command: python visualiz_analysis.py samplefiles/results
+    5b) The csv results are visualized for one or more simulations using visualiz_analysis.py. Types of files is hardcoded. Sample plot 5 simulations: rmsd5simulations.png
+    --- Command: python visualiz_analysis.py samplefiles/results
 
 
 This github repository accompanies a publication in preparation.
 
+*PyMOL Reference: The PyMOL Molecular Graphics System, Version 2.5.8 Schrödinger, LLC.
 
+** Gromacs References:
+1. H. Bekker, H.J.C. Berendsen, E.J. Dijkstra, S. Achterop, R. van Drunen, D. van der Spoel, A. Sijbers, and H. Keegstra et al., “Gromacs: A parallel computer for molecular dynamics simulations”; pp. 252–256 in Physics computing 92. Edited by R.A. de Groot and J. Nadrchal. World Scientific, Singapore, 1993.
+2. H.J.C. Berendsen, D. van der Spoel, and R. van Drunen, “GROMACS: A message-passing parallel molecular dynamics implementation,” Comp. Phys. Comm., 91 43–56 (1995).
+3. E. Lindahl, B. Hess, and D. van der Spoel, “GROMACS 3.0: A package for molecular simulation and trajectory analysis,” J. Mol. Mod., 7 306–317 (2001).
+4. D. van der Spoel, E. Lindahl, B. Hess, G. Groenhof, A.E. Mark, and H.J.C. Berendsen, “GROMACS: Fast, Flexible and Free,” J. Comp. Chem., 26 1701–1718 (2005).
+5. B. Hess, C. Kutzner, D. van der Spoel, and E. Lindahl, “GROMACS 4: Algorithms for Highly Efficient, Load-Balanced, and Scalable Molecular Simulation,” J. Chem. Theory Comput., 4 [3] 435–447 (2008).
+6. S. Pronk, S. Páll, R. Schulz, P. Larsson, P. Bjelkmar, R. Apostolov, M.R. Shirts, and J.C. Smith et al., “GROMACS 4.5: A high-throughput and highly parallel open source molecular simulation toolkit,” Bioinformatics, 29 [7] 845–854 (2013).
+7. S. Páll, M.J. Abraham, C. Kutzner, B. Hess, and E. Lindahl, “Tackling exascale software challenges in molecular dynamics simulations with GROMACS”; pp. 3–27 in Solving software challenges for exascale. Edited by S. Markidis and E. Laure. Springer International Publishing Switzerland, London, 2015.
+8. M.J. Abraham, T. Murtola, R. Schulz, S. Páll, J.C. Smith, B. Hess, and E. Lindahl, “GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers,” SoftwareX, 1–2 19–25 (2015).
 
-*The force field (FF) AMBER14SB was used (1). Parameters for the modified nucleotides were added to make a modified FF from the literature: 2'OMe (2), LNA (3) and PS (4). For the unreported LNA thymidine, the parameters were derived from (3) for the sugar ring and from AMBER03FF for the base (5). Its charges were calculated with the RESP ESP charge Derive (RED) server (6). The parameters for the C3 linker are from the GAFF FF (7). 
-
-References:
+***The force field (FF) AMBER14SB was used (1). Parameters for the modified nucleotides were added to make a modified FF from the literature: 2'OMe (2), LNA (3) and PS (4). For the unreported LNA thymidine, the parameters were derived from (3) for the sugar ring and from AMBER03FF for the base (5). Its charges were calculated with the RESP ESP charge Derive (RED) server (6). The parameters for the C3 linker are from the GAFF FF (7). FF References:
 
 1. Maier, J. A. et al. ff14SB: improving the accuracy of protein side chain and backbone parameters from ff99SB. J. Chem. Theory Comput. 11, 3696–3713 (2015) 
 2. Aduri, R., Psciuk, B.T., Saro, P., Taniga, H., Schlegel, H.B., and SantaLucia, J. (2007). AMBER force field parameters for the naturally occurring modified nucleosides in RNA. J. Chem. Theor. Comput. 3, 1464–1475.
@@ -54,5 +62,6 @@ References:
 5. Duan, Y., Wu, C., Chowdhury, S., Lee, M.C., Xiong, G., Zhang, W., Yang, R., Cieplak, P., Luo, R., Lee, T., et al. (2003). A point-charge force field for molecular mechanics simulations of proteins based on condensed-phase quantum mechanical calculations. J. Comput. Chem. 24, 1999–2012.
 6.(http://q4md- forcefieldtools.org/REDServer/).
 7. Wang, J., Wolf, R.M., Caldwell, J.W., Kollman, P.A., and Case, D.A. (2004). Development and testing of a general amber force field. J. Comput. Chem. 25, 1157–1174.
+
 
 ![3-strand double helix construct image](https://github.com/martagu/rna_modify_MD_analyze/blob/main/samplefiles/md1pdb.png?raw=true)
