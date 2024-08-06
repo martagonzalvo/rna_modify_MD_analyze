@@ -2,7 +2,7 @@ Author: Marta Gonzalvo
 
 Project goal: understand siRNA structures through simulation
 
-Approach: Build rna structures with modified and unnatural residues, run molecular dynamics simulations and analyze impact of different sequences on structure and stability
+Approach: Build rna structures with modified and unnatural residues (2'-O-methyl [2'OMe], locked nucleic acids [LNA], phosphorothioate [PS]) , run molecular dynamics simulations and analyze impact of different sequences on structure and stability
 
 
 siRNA of interest is constituted of one long core strand and two shorter sensor and guide strands that both base pair with core strand. They form 2 double helices.
