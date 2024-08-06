@@ -41,7 +41,7 @@ Protocol:
 
 This github repository accompanies a publication in preparation.
 
-Softwares used: pandas, MDTraj, MDAnalysis, Matplotlib****
+Software used: pandas, MDTraj, MDAnalysis, Matplotlib****
 
 *PyMOL Reference: The PyMOL Molecular Graphics System, Version 2.5.8 Schrödinger, LLC.
 
@@ -65,7 +65,7 @@ Softwares used: pandas, MDTraj, MDAnalysis, Matplotlib****
 6.(http://q4md- forcefieldtools.org/REDServer/).
 7. Wang, J., Wolf, R.M., Caldwell, J.W., Kollman, P.A., and Case, D.A. (2004). Development and testing of a general amber force field. J. Comput. Chem. 25, 1157–1174.
 
-****Citations softwares:
+****Citations software:
 1. The pandas development team. pandas-dev/pandas: Pandas (2020) Zenodo, https://doi.org/10.5281/zenodo.3509134
 2. McKinney, W. Data Structures for Statistical Computing in Python, Proceedings of the 9th Python in Science Conference (2010), 56-61
 3. McGibbon, R. T., Beauchamp, K. A., Harrigan, M. P., Klein, C., Swails, J. M., Hernández, C. X., Schwantes, C. R., Wang, L.-P., Lane, T. J., and Pande, V. S. (2015). MDTraj: A Modern Open Library for the Analysis of Molecular Dynamics Trajectories. Biophysical Journal. 109, 8, 1528-1532.
