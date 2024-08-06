@@ -1,0 +1,33 @@
+HEADER lC.bgf converted to pdb format using bgf2pdb.pl
+REMARK BGF file created by Cerius2
+REMARK BGF file created by Cerius2
+REMARK BGF file created by Cerius2
+REMARK Created by mgethers on Mon Aug 22 10:44:46 2016
+HETATM    1 C5'   lC A   1     -28.826   4.461  82.734
+HETATM    2 H5'1  lC A   1     -28.108   3.642  82.767
+HETATM    3 H5'2  lC A   1     -28.328   5.366  82.386
+HETATM    4 C4'   lC A   1     -29.931   4.110  81.783
+HETATM    5 O4'   lC A   1     -30.582   2.930  82.220
+HETATM    6 C1'   lC A   1     -31.965   2.993  81.887
+HETATM    7 H1'   lC A   1     -32.283   2.115  81.324
+HETATM    8 N1    lC A   1     -32.795   2.939  83.123
+HETATM    9 C6    lC A   1     -32.297   3.210  84.351
+HETATM   10 H6    lC A   1     -31.269   3.525  84.453
+HETATM   11 C5    lC A   1     -33.051   3.095  85.448
+HETATM   12 H5    lC A   1     -32.616   3.331  86.419
+HETATM   13 C4    lC A   1     -34.387   2.662  85.285
+HETATM   14 N4    lC A   1     -35.185   2.507  86.331
+HETATM   15 H41   lC A   1     -36.130   2.195  86.158
+HETATM   16 H42   lC A   1     -34.845   2.698  87.263
+HETATM   17 N3    lC A   1     -34.874   2.393  84.073
+HETATM   18 C2    lC A   1     -34.103   2.524  82.973
+HETATM   19 O2    lC A   1     -34.534   2.287  81.853
+HETATM   20 C3'   lC A   1     -31.043   5.138  81.695
+HETATM   21 H3'   lC A   1     -31.446   5.975  82.265
+HETATM   22 C2'   lC A   1     -32.180   4.296  81.164
+HETATM   23 H2'1  lC A   1     -33.002   4.981  81.372
+HETATM   24 O2'   lC A   1     -31.449   4.121  80.035
+HETATM   25 C6'   lC A   1     -30.055   3.935  80.368
+HETATM   26 H6'1  lC A   1     -29.516   4.577  79.921
+HETATM   27 H6'2  lC A   1     -29.779   3.058  80.127
+END

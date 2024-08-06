@@ -1,0 +1,828 @@
+RA5	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RA	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RA3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+RAN	11
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+DT5	9
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+2	6	H2'	C2'	C1'	C3'	
+DT	8
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+2	6	H2'	C2'	C1'	C3'	
+DT3	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+2	6	H2'	C2'	C1'	C3'	
+1	2	H3T	O3'	C3'	C4'	
+RU5	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RU	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RU3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+RUN	11
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+RG5	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RG	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RG3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+RGN	11
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+RC5	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RC	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RC3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+RCN	11
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+LA5     9
+1       2       H5T     O5'     C5'     C4'
+2       6       H5'     C5'     O5'     C4'
+1       5       H1'     C1'     O4'     N9      C2'
+1       1       H8      C8      N9      N7
+2       3       H6      N6      C6      C5
+1       1       H2      C2      N1      N3
+1       5       H3'     C3'     C4'     C2'     O3'
+1       5       H2'1    C2'     C1'     C3'     O2'
+2       6       H6'     C6'    C4'      O2'
+LA      8
+2       6       H5'     C5'     O5'     C4'
+1       5       H1'     C1'     O4'     N9      C2'
+1       1       H8      C8      N9      N7
+2       3       H6      N6      C6      C5
+1       1       H2      C2      N1      N3
+1       5       H3'     C3'     C4'     C2'     O3'
+1       5       H2'1    C2'     C1'     C3'     O2'
+2       6       H6'     C6'    C4'      O2'
+LA3     9
+2       6       H5'     C5'     O5'     C4'
+1       5       H1'     C1'     O4'     N9      C2'
+1       1       H8      C8      N9      N7
+2       3       H6      N6      C6      C5
+1       1       H2      C2      N1      N3
+1       5       H3'     C3'     C4'     C2'     O3'
+1       5       H2'1    C2'     C1'     C3'     O2'
+2       6       H6'     C6'    C4'      O2'
+1       2       H3T     O3'     C3'     C4'
+LAN     10
+1       2       H5T     O5'     C5'     C4'
+2       6       H5'     C5'     O5'     C4'
+1       5       H1'     C1'     O4'     N9      C2'
+1       1       H8      C8      N9      N7
+2       3       H6      N6      C6      C5
+1       1       H2      C2      N1      N3
+1       5       H3'     C3'     C4'     C2'     O3'
+1       5       H2'1    C2'     C1'     C3'     O2'
+2       6       H6'     C6'    C4'      O2'
+1       2       H3T     O3'     C3'     C4'
+LT5	9
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+LT	8
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+LT3	9
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+1	2	H3T	O3'	C3'	C4'	
+LTN	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+1	2	H3T	O3'	C3'	C4'	
+LG5	9
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+LG	8
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+LG3	9
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+1	2	H3T	O3'	C3'	C4'	
+LGN	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+1	2	H3T	O3'	C3'	C4'	
+LC5	9
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+LC	8
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+LC3	9
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+1	2	H3T	O3'	C3'	C4'	
+LCN	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6' C6' C4' O2'
+1	2	H3T	O3'	C3'	C4'	
+RL  3
+2	6	H1	C1	O3'	C2
+2	6	H2	C2	C1	C3
+2	6	H3	C3	C2	O5'
+MA5	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+MA	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+MA3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	
+MAN	11
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	
+MU5	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+MU	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+MU3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	
+MUN	11
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	
+NG5	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+NG	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+NG3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	
+NGN	11
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	
+MC5	10
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+MC	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1'	
+MC3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	
+MCN	11
+1	2	H5T	O5'	C5'	C4'	
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	
+PA  15
+3	4	H16	C16	C15	C14
+2	6	H15	C15	C16	C14
+2	6	H14	C14	C15	C13
+2	6	H13	C13	C14	C12
+2	6	H12	C12	C13	C11
+2	6	H11	C11	C12	C10
+2	6	H10	C10	C11	C9
+2	6	H9	C9	C10	C8
+2	6	H8	C8	C9	C7
+2	6	H7	C7	C8	C6
+2	6	H6	C6	C7	C5
+2	6	H5	C5	C6	C4
+2	6	H4	C4	C5	C3
+2	6	H3	C3	C4	C2
+2	6	H2	C2	C3	C1	
+RAS	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RAS3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+DTS	8
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+2	6	H2'	C2'	C1'	C3'	
+DTS3	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+2	6	H2'	C2'	C1'	C3'	
+1	2	H3T	O3'	C3'	C4'	
+RUS	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RUS3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+RGS	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RGS3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+RCS	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+RCS3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+1	2	HO'2	O2'	C2'	C1'	
+1	2	H3T	O3'	C3'	C4'	
+LAS      8
+2       6       H5'     C5'     O5'     C4'
+1       5       H1'     C1'     O4'     N9      C2'
+1       1       H8      C8      N9      N7
+2       3       H6      N6      C6      C5
+1       1       H2      C2      N1      N3
+1       5       H3'     C3'     C4'     C2'     O3'
+1       5       H2'1    C2'     C1'     C3'     O2'
+2       6       H6'     C6'    C4'      O2'
+LAS3     9
+2       6       H5'     C5'     O5'     C4'
+1       5       H1'     C1'     O4'     N9      C2'
+1       1       H8      C8      N9      N7
+2       3       H6      N6      C6      C5
+1       1       H2      C2      N1      N3
+1       5       H3'     C3'     C4'     C2'     O3'
+1       5       H2'1    C2'     C1'     C3'     O2'
+2       6       H6'     C6'    C4'      O2'
+1       2       H3T     O3'     C3'     C4'	
+LTS	8
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+LTS3	9
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+3	4	H7	C7	C5	C6
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+1	2	H3T	O3'	C3'	C4'	
+LGS	8
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+LGS3	9
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+1	2	H3T	O3'	C3'	C4'	
+LCS	8
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+LCS3	9
+2	6	H5'	C5'	O5'	C4'		
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'1	C2'	C1'	C3'	O2'	
+2	6	H6'	C6'	C4'	O2'	
+1	2	H3T	O3'	C3'	C4'	
+RLS  3
+2	6	H1	C1	O3'	C2
+2	6	H2	C2	C1	C3
+2	6	H3	C3	C2	O5'
+MAS	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+MAS3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+2	3	H6	N6	C6	C5	
+1	1	H2	C2	N1	N3	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	
+MUS	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+MUS3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+1	1	H3	N3	C4	C2	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	
+NGS	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+NGS3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N9	C2'	
+1	1	H8	C8	N9	N7	
+1	1	H1	N1	C6	C2	
+2	3	H2	N2	C2	N1	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	 
+MCS	9
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1'	
+MCS3	10
+2	6	H5'	C5'	O5'	C4'	
+1	5	H4'	C4'	C5'	O4'	C3'	
+1	5	H1'	C1'	O4'	N1	C2'	
+1	1	H6	C6	N1	C5	
+1	1	H5	C5	C6	C4	
+2	3	H4	N4	C4	C5	
+1	5	H3'	C3'	C4'	C2'	O3'	
+1	5	H2'	C2'	C1'	C3'	O2'	
+3	4	HM'	CM2	O2'	C1' 
+1	2	H3T	O3'	C3'	C4'	

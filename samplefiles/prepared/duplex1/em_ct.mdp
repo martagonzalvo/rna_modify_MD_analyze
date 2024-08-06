@@ -1,0 +1,2353 @@
+; minim.mdp - used as input into grompp to generate em.tpr
+; Parameters describing what to do, when to stop and what to save
+integrator  = steep         ; Algorithm (steep = steepest descent minimization)
+emtol       = 1000.0        ; Stop minimization when the maximum force < 1000.0 kJ/mol/nm
+emstep      = 0.01          ; Minimization step size
+nsteps      = 200         ; Maximum number of (minimization) steps to perform
+
+; Parameters describing how to find the neighbors of each atom and how to calculate the interactions
+nstlist         = 1         ; Frequency to update the neighbor list and long range forces
+cutoff-scheme   = Verlet    ; Buffered neighbor searching
+ns_type         = grid      ; Method to determine neighbor list (simple, grid)
+coulombtype     = PME       ; Treatment of long range electrostatic interactions
+rcoulomb        = 1.3       ; Short-range electrostatic cut-off
+rvdw            = 1.3       ; Short-range Van der Waals cut-off
+pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
+
+pull                    = yes
+pull_ngroups            = 440  ;
+pull_ncoords            = 263  ;
+pull_group1_name = a_1276
+pull_group2_name = a_2927
+pull_group3_name = a_1277
+pull_group4_name = a_2927
+pull_group5_name = a_1280
+pull_group6_name = a_2932
+pull_group7_name = a_1280
+pull_group8_name = a_2933
+pull_group9_name = a_1278
+pull_group10_name = a_2929
+pull_group11_name = a_1307
+pull_group12_name = a_2894
+pull_group13_name = a_1308
+pull_group14_name = a_2894
+pull_group15_name = a_1311
+pull_group16_name = a_2899
+pull_group17_name = a_1311
+pull_group18_name = a_2900
+pull_group19_name = a_1309
+pull_group20_name = a_2896
+pull_group21_name = a_1338
+pull_group22_name = a_2861
+pull_group23_name = a_1339
+pull_group24_name = a_2861
+pull_group25_name = a_1342
+pull_group26_name = a_2866
+pull_group27_name = a_1342
+pull_group28_name = a_2867
+pull_group29_name = a_1340
+pull_group30_name = a_2863
+pull_group31_name = a_1369
+pull_group32_name = a_2828
+pull_group33_name = a_1370
+pull_group34_name = a_2828
+pull_group35_name = a_1373
+pull_group36_name = a_2833
+pull_group37_name = a_1373
+pull_group38_name = a_2834
+pull_group39_name = a_1371
+pull_group40_name = a_2830
+pull_group41_name = a_1400
+pull_group42_name = a_2795
+pull_group43_name = a_1401
+pull_group44_name = a_2795
+pull_group45_name = a_1404
+pull_group46_name = a_2800
+pull_group47_name = a_1404
+pull_group48_name = a_2801
+pull_group49_name = a_1402
+pull_group50_name = a_2797
+pull_group51_name = a_1431
+pull_group52_name = a_2762
+pull_group53_name = a_1432
+pull_group54_name = a_2762
+pull_group55_name = a_1435
+pull_group56_name = a_2767
+pull_group57_name = a_1435
+pull_group58_name = a_2768
+pull_group59_name = a_1433
+pull_group60_name = a_2764
+pull_group61_name = a_1462
+pull_group62_name = a_2729
+pull_group63_name = a_1463
+pull_group64_name = a_2729
+pull_group65_name = a_1466
+pull_group66_name = a_2734
+pull_group67_name = a_1466
+pull_group68_name = a_2735
+pull_group69_name = a_1464
+pull_group70_name = a_2731
+pull_group71_name = a_1493
+pull_group72_name = a_2696
+pull_group73_name = a_1494
+pull_group74_name = a_2696
+pull_group75_name = a_1497
+pull_group76_name = a_2701
+pull_group77_name = a_1497
+pull_group78_name = a_2702
+pull_group79_name = a_1495
+pull_group80_name = a_2698
+pull_group81_name = a_1524
+pull_group82_name = a_2663
+pull_group83_name = a_1525
+pull_group84_name = a_2663
+pull_group85_name = a_1528
+pull_group86_name = a_2668
+pull_group87_name = a_1528
+pull_group88_name = a_2669
+pull_group89_name = a_1526
+pull_group90_name = a_2665
+pull_group91_name = a_1555
+pull_group92_name = a_2630
+pull_group93_name = a_1556
+pull_group94_name = a_2630
+pull_group95_name = a_1559
+pull_group96_name = a_2635
+pull_group97_name = a_1559
+pull_group98_name = a_2636
+pull_group99_name = a_1557
+pull_group100_name = a_2632
+pull_group101_name = a_1586
+pull_group102_name = a_2597
+pull_group103_name = a_1587
+pull_group104_name = a_2597
+pull_group105_name = a_1590
+pull_group106_name = a_2602
+pull_group107_name = a_1590
+pull_group108_name = a_2603
+pull_group109_name = a_1588
+pull_group110_name = a_2599
+pull_group111_name = a_1617
+pull_group112_name = a_2564
+pull_group113_name = a_1618
+pull_group114_name = a_2564
+pull_group115_name = a_1621
+pull_group116_name = a_2569
+pull_group117_name = a_1621
+pull_group118_name = a_2570
+pull_group119_name = a_1619
+pull_group120_name = a_2566
+pull_group121_name = a_1648
+pull_group122_name = a_2531
+pull_group123_name = a_1649
+pull_group124_name = a_2531
+pull_group125_name = a_1652
+pull_group126_name = a_2536
+pull_group127_name = a_1652
+pull_group128_name = a_2537
+pull_group129_name = a_1650
+pull_group130_name = a_2533
+pull_group131_name = a_1679
+pull_group132_name = a_2498
+pull_group133_name = a_1680
+pull_group134_name = a_2498
+pull_group135_name = a_1683
+pull_group136_name = a_2503
+pull_group137_name = a_1683
+pull_group138_name = a_2504
+pull_group139_name = a_1681
+pull_group140_name = a_2500
+pull_group141_name = a_1710
+pull_group142_name = a_2465
+pull_group143_name = a_1711
+pull_group144_name = a_2465
+pull_group145_name = a_1714
+pull_group146_name = a_2470
+pull_group147_name = a_1714
+pull_group148_name = a_2471
+pull_group149_name = a_1712
+pull_group150_name = a_2467
+pull_group151_name = a_1741
+pull_group152_name = a_2432
+pull_group153_name = a_1742
+pull_group154_name = a_2432
+pull_group155_name = a_1745
+pull_group156_name = a_2437
+pull_group157_name = a_1745
+pull_group158_name = a_2438
+pull_group159_name = a_1743
+pull_group160_name = a_2434
+pull_group161_name = a_1772
+pull_group162_name = a_2399
+pull_group163_name = a_1773
+pull_group164_name = a_2399
+pull_group165_name = a_1776
+pull_group166_name = a_2404
+pull_group167_name = a_1776
+pull_group168_name = a_2405
+pull_group169_name = a_1774
+pull_group170_name = a_2401
+pull_group171_name = a_1803
+pull_group172_name = a_2366
+pull_group173_name = a_1804
+pull_group174_name = a_2366
+pull_group175_name = a_1807
+pull_group176_name = a_2371
+pull_group177_name = a_1807
+pull_group178_name = a_2372
+pull_group179_name = a_1805
+pull_group180_name = a_2368
+pull_group181_name = a_1834
+pull_group182_name = a_2333
+pull_group183_name = a_1835
+pull_group184_name = a_2333
+pull_group185_name = a_1838
+pull_group186_name = a_2338
+pull_group187_name = a_1838
+pull_group188_name = a_2339
+pull_group189_name = a_1836
+pull_group190_name = a_2335
+pull_group191_name = a_1865
+pull_group192_name = a_2300
+pull_group193_name = a_1866
+pull_group194_name = a_2300
+pull_group195_name = a_1869
+pull_group196_name = a_2305
+pull_group197_name = a_1869
+pull_group198_name = a_2306
+pull_group199_name = a_1867
+pull_group200_name = a_2302
+pull_group201_name = a_1896
+pull_group202_name = a_2267
+pull_group203_name = a_1897
+pull_group204_name = a_2267
+pull_group205_name = a_1900
+pull_group206_name = a_2272
+pull_group207_name = a_1900
+pull_group208_name = a_2273
+pull_group209_name = a_1898
+pull_group210_name = a_2269
+pull_group211_name = a_18
+pull_group212_name = a_1215
+pull_group213_name = a_19
+pull_group214_name = a_1215
+pull_group215_name = a_20
+pull_group216_name = a_1217
+pull_group217_name = a_50
+pull_group218_name = a_1185
+pull_group219_name = a_51
+pull_group220_name = a_1185
+pull_group221_name = a_52
+pull_group222_name = a_1187
+pull_group223_name = a_92
+pull_group224_name = a_1155
+pull_group225_name = a_93
+pull_group226_name = a_1155
+pull_group227_name = a_94
+pull_group228_name = a_1157
+pull_group229_name = a_128
+pull_group230_name = a_1125
+pull_group231_name = a_129
+pull_group232_name = a_1125
+pull_group233_name = a_130
+pull_group234_name = a_1127
+pull_group235_name = a_156
+pull_group236_name = a_1095
+pull_group237_name = a_157
+pull_group238_name = a_1095
+pull_group239_name = a_158
+pull_group240_name = a_1097
+pull_group241_name = a_191
+pull_group242_name = a_1065
+pull_group243_name = a_192
+pull_group244_name = a_1065
+pull_group245_name = a_193
+pull_group246_name = a_1067
+pull_group247_name = a_224
+pull_group248_name = a_1035
+pull_group249_name = a_225
+pull_group250_name = a_1035
+pull_group251_name = a_226
+pull_group252_name = a_1037
+pull_group253_name = a_257
+pull_group254_name = a_1005
+pull_group255_name = a_258
+pull_group256_name = a_1005
+pull_group257_name = a_259
+pull_group258_name = a_1007
+pull_group259_name = a_290
+pull_group260_name = a_975
+pull_group261_name = a_291
+pull_group262_name = a_975
+pull_group263_name = a_292
+pull_group264_name = a_977
+pull_group265_name = a_323
+pull_group266_name = a_945
+pull_group267_name = a_324
+pull_group268_name = a_945
+pull_group269_name = a_325
+pull_group270_name = a_947
+pull_group271_name = a_356
+pull_group272_name = a_915
+pull_group273_name = a_357
+pull_group274_name = a_915
+pull_group275_name = a_358
+pull_group276_name = a_917
+pull_group277_name = a_389
+pull_group278_name = a_2238
+pull_group279_name = a_390
+pull_group280_name = a_2238
+pull_group281_name = a_391
+pull_group282_name = a_2240
+pull_group283_name = a_422
+pull_group284_name = a_2208
+pull_group285_name = a_423
+pull_group286_name = a_2208
+pull_group287_name = a_424
+pull_group288_name = a_2210
+pull_group289_name = a_455
+pull_group290_name = a_2178
+pull_group291_name = a_456
+pull_group292_name = a_2178
+pull_group293_name = a_457
+pull_group294_name = a_2180
+pull_group295_name = a_488
+pull_group296_name = a_2148
+pull_group297_name = a_489
+pull_group298_name = a_2148
+pull_group299_name = a_490
+pull_group300_name = a_2150
+pull_group301_name = a_521
+pull_group302_name = a_2118
+pull_group303_name = a_522
+pull_group304_name = a_2118
+pull_group305_name = a_523
+pull_group306_name = a_2120
+pull_group307_name = a_554
+pull_group308_name = a_2088
+pull_group309_name = a_555
+pull_group310_name = a_2088
+pull_group311_name = a_556
+pull_group312_name = a_2090
+pull_group313_name = a_587
+pull_group314_name = a_2058
+pull_group315_name = a_588
+pull_group316_name = a_2058
+pull_group317_name = a_589
+pull_group318_name = a_2060
+pull_group319_name = a_620
+pull_group320_name = a_2028
+pull_group321_name = a_621
+pull_group322_name = a_2028
+pull_group323_name = a_622
+pull_group324_name = a_2030
+pull_group325_name = a_653
+pull_group326_name = a_1998
+pull_group327_name = a_654
+pull_group328_name = a_1998
+pull_group329_name = a_655
+pull_group330_name = a_2000
+pull_group331_name = a_686
+pull_group332_name = a_1968
+pull_group333_name = a_687
+pull_group334_name = a_1968
+pull_group335_name = a_688
+pull_group336_name = a_1970
+pull_group337_name = a_719
+pull_group338_name = a_1938
+pull_group339_name = a_720
+pull_group340_name = a_1938
+pull_group341_name = a_721
+pull_group342_name = a_1940
+pull_group343_name = a_1915
+pull_group344_name = a_1907
+pull_group345_name = a_1256
+pull_group346_name = a_1257
+pull_group347_name = a_2220
+pull_group348_name = a_2219
+pull_group349_name = a_2249
+pull_group350_name = a_899
+pull_group351_name = a_32
+pull_group352_name = a_31
+pull_group353_name = a_66
+pull_group354_name = a_65
+pull_group355_name = a_102
+pull_group356_name = a_101
+pull_group357_name = a_138
+pull_group358_name = a_137
+pull_group359_name = a_172
+pull_group360_name = a_171
+pull_group361_name = a_205
+pull_group362_name = a_204
+pull_group363_name = a_238
+pull_group364_name = a_237
+pull_group365_name = a_271
+pull_group366_name = a_270
+pull_group367_name = a_304
+pull_group368_name = a_303
+pull_group369_name = a_337
+pull_group370_name = a_336
+pull_group371_name = a_370
+pull_group372_name = a_369
+pull_group373_name = a_403
+pull_group374_name = a_402
+pull_group375_name = a_436
+pull_group376_name = a_435
+pull_group377_name = a_469
+pull_group378_name = a_468
+pull_group379_name = a_502
+pull_group380_name = a_501
+pull_group381_name = a_535
+pull_group382_name = a_534
+pull_group383_name = a_568
+pull_group384_name = a_567
+pull_group385_name = a_601
+pull_group386_name = a_600
+pull_group387_name = a_634
+pull_group388_name = a_633
+pull_group389_name = a_667
+pull_group390_name = a_666
+pull_group391_name = a_700
+pull_group392_name = a_699
+pull_group393_name = a_733
+pull_group394_name = a_732
+pull_group395_name = a_767
+pull_group396_name = a_766
+pull_group397_name = a_801
+pull_group398_name = a_800
+pull_group399_name = a_835
+pull_group400_name = a_834
+pull_group401_name = a_1950
+pull_group402_name = a_1949
+pull_group403_name = a_1980
+pull_group404_name = a_1979
+pull_group405_name = a_2010
+pull_group406_name = a_2009
+pull_group407_name = a_2040
+pull_group408_name = a_2039
+pull_group409_name = a_2070
+pull_group410_name = a_2069
+pull_group411_name = a_2100
+pull_group412_name = a_2099
+pull_group413_name = a_2130
+pull_group414_name = a_2129
+pull_group415_name = a_2160
+pull_group416_name = a_2159
+pull_group417_name = a_2190
+pull_group418_name = a_2189
+pull_group419_name = a_2220
+pull_group420_name = a_2219
+pull_group421_name = a_927
+pull_group422_name = a_926
+pull_group423_name = a_957
+pull_group424_name = a_956
+pull_group425_name = a_987
+pull_group426_name = a_986
+pull_group427_name = a_1017
+pull_group428_name = a_1016
+pull_group429_name = a_1047
+pull_group430_name = a_1046
+pull_group431_name = a_1077
+pull_group432_name = a_1076
+pull_group433_name = a_1107
+pull_group434_name = a_1106
+pull_group435_name = a_1137
+pull_group436_name = a_1136
+pull_group437_name = a_1167
+pull_group438_name = a_1166
+pull_group439_name = a_1197
+pull_group440_name = a_1196
+
+pull-coord1-type         = umbrella
+pull-coord1-geometry     = distance
+pull-coord1-groups       = 1 2
+pull-coord1-dim          = Y Y Y
+pull-coord1-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord2-type         = umbrella
+pull-coord2-geometry     = distance
+pull-coord2-groups       = 3 4
+pull-coord2-dim          = Y Y Y
+pull-coord2-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord3-type         = umbrella
+pull-coord3-geometry     = distance
+pull-coord3-groups       = 5 6
+pull-coord3-dim          = Y Y Y
+pull-coord3-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord4-type         = umbrella
+pull-coord4-geometry     = distance
+pull-coord4-groups       = 7 8
+pull-coord4-dim          = Y Y Y
+pull-coord4-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord5-type         = umbrella
+pull-coord5-geometry     = distance
+pull-coord5-groups       = 9 10
+pull-coord5-dim          = Y Y Y
+pull-coord5-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord6-type         = umbrella
+pull-coord6-geometry     = transformation
+pull-coord6-expression   = max(0.35, 0.3333333333333333 * min(x1, x2) + 0.3333333333333333 * min(x3, x4) + 0.3333333333333333 * x5)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord6-init         = 0.35    ; restrains the average distance
+pull-coord6-k            = 200000
+
+
+pull-coord7-type         = umbrella
+pull-coord7-geometry     = distance
+pull-coord7-groups       = 11 12
+pull-coord7-dim          = Y Y Y
+pull-coord7-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord8-type         = umbrella
+pull-coord8-geometry     = distance
+pull-coord8-groups       = 13 14
+pull-coord8-dim          = Y Y Y
+pull-coord8-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord9-type         = umbrella
+pull-coord9-geometry     = distance
+pull-coord9-groups       = 15 16
+pull-coord9-dim          = Y Y Y
+pull-coord9-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord10-type         = umbrella
+pull-coord10-geometry     = distance
+pull-coord10-groups       = 17 18
+pull-coord10-dim          = Y Y Y
+pull-coord10-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord11-type         = umbrella
+pull-coord11-geometry     = distance
+pull-coord11-groups       = 19 20
+pull-coord11-dim          = Y Y Y
+pull-coord11-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord12-type         = umbrella
+pull-coord12-geometry     = transformation
+pull-coord12-expression   = max(0.35, 0.3333333333333333 * min(x7, x8) + 0.3333333333333333 * min(x9, x10) + 0.3333333333333333 * x11)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord12-init         = 0.35    ; restrains the average distance
+pull-coord12-k            = 200000
+
+
+pull-coord13-type         = umbrella
+pull-coord13-geometry     = distance
+pull-coord13-groups       = 21 22
+pull-coord13-dim          = Y Y Y
+pull-coord13-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord14-type         = umbrella
+pull-coord14-geometry     = distance
+pull-coord14-groups       = 23 24
+pull-coord14-dim          = Y Y Y
+pull-coord14-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord15-type         = umbrella
+pull-coord15-geometry     = distance
+pull-coord15-groups       = 25 26
+pull-coord15-dim          = Y Y Y
+pull-coord15-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord16-type         = umbrella
+pull-coord16-geometry     = distance
+pull-coord16-groups       = 27 28
+pull-coord16-dim          = Y Y Y
+pull-coord16-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord17-type         = umbrella
+pull-coord17-geometry     = distance
+pull-coord17-groups       = 29 30
+pull-coord17-dim          = Y Y Y
+pull-coord17-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord18-type         = umbrella
+pull-coord18-geometry     = transformation
+pull-coord18-expression   = max(0.35, 0.3333333333333333 * min(x13, x14) + 0.3333333333333333 * min(x15, x16) + 0.3333333333333333 * x17)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord18-init         = 0.35    ; restrains the average distance
+pull-coord18-k            = 200000
+
+
+pull-coord19-type         = umbrella
+pull-coord19-geometry     = distance
+pull-coord19-groups       = 31 32
+pull-coord19-dim          = Y Y Y
+pull-coord19-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord20-type         = umbrella
+pull-coord20-geometry     = distance
+pull-coord20-groups       = 33 34
+pull-coord20-dim          = Y Y Y
+pull-coord20-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord21-type         = umbrella
+pull-coord21-geometry     = distance
+pull-coord21-groups       = 35 36
+pull-coord21-dim          = Y Y Y
+pull-coord21-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord22-type         = umbrella
+pull-coord22-geometry     = distance
+pull-coord22-groups       = 37 38
+pull-coord22-dim          = Y Y Y
+pull-coord22-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord23-type         = umbrella
+pull-coord23-geometry     = distance
+pull-coord23-groups       = 39 40
+pull-coord23-dim          = Y Y Y
+pull-coord23-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord24-type         = umbrella
+pull-coord24-geometry     = transformation
+pull-coord24-expression   = max(0.35, 0.3333333333333333 * min(x19, x20) + 0.3333333333333333 * min(x21, x22) + 0.3333333333333333 * x23)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord24-init         = 0.35    ; restrains the average distance
+pull-coord24-k            = 200000
+
+
+pull-coord25-type         = umbrella
+pull-coord25-geometry     = distance
+pull-coord25-groups       = 41 42
+pull-coord25-dim          = Y Y Y
+pull-coord25-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord26-type         = umbrella
+pull-coord26-geometry     = distance
+pull-coord26-groups       = 43 44
+pull-coord26-dim          = Y Y Y
+pull-coord26-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord27-type         = umbrella
+pull-coord27-geometry     = distance
+pull-coord27-groups       = 45 46
+pull-coord27-dim          = Y Y Y
+pull-coord27-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord28-type         = umbrella
+pull-coord28-geometry     = distance
+pull-coord28-groups       = 47 48
+pull-coord28-dim          = Y Y Y
+pull-coord28-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord29-type         = umbrella
+pull-coord29-geometry     = distance
+pull-coord29-groups       = 49 50
+pull-coord29-dim          = Y Y Y
+pull-coord29-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord30-type         = umbrella
+pull-coord30-geometry     = transformation
+pull-coord30-expression   = max(0.35, 0.3333333333333333 * min(x25, x26) + 0.3333333333333333 * min(x27, x28) + 0.3333333333333333 * x29)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord30-init         = 0.35    ; restrains the average distance
+pull-coord30-k            = 200000
+
+
+pull-coord31-type         = umbrella
+pull-coord31-geometry     = distance
+pull-coord31-groups       = 51 52
+pull-coord31-dim          = Y Y Y
+pull-coord31-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord32-type         = umbrella
+pull-coord32-geometry     = distance
+pull-coord32-groups       = 53 54
+pull-coord32-dim          = Y Y Y
+pull-coord32-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord33-type         = umbrella
+pull-coord33-geometry     = distance
+pull-coord33-groups       = 55 56
+pull-coord33-dim          = Y Y Y
+pull-coord33-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord34-type         = umbrella
+pull-coord34-geometry     = distance
+pull-coord34-groups       = 57 58
+pull-coord34-dim          = Y Y Y
+pull-coord34-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord35-type         = umbrella
+pull-coord35-geometry     = distance
+pull-coord35-groups       = 59 60
+pull-coord35-dim          = Y Y Y
+pull-coord35-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord36-type         = umbrella
+pull-coord36-geometry     = transformation
+pull-coord36-expression   = max(0.35, 0.3333333333333333 * min(x31, x32) + 0.3333333333333333 * min(x33, x34) + 0.3333333333333333 * x35)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord36-init         = 0.35    ; restrains the average distance
+pull-coord36-k            = 200000
+
+
+pull-coord37-type         = umbrella
+pull-coord37-geometry     = distance
+pull-coord37-groups       = 61 62
+pull-coord37-dim          = Y Y Y
+pull-coord37-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord38-type         = umbrella
+pull-coord38-geometry     = distance
+pull-coord38-groups       = 63 64
+pull-coord38-dim          = Y Y Y
+pull-coord38-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord39-type         = umbrella
+pull-coord39-geometry     = distance
+pull-coord39-groups       = 65 66
+pull-coord39-dim          = Y Y Y
+pull-coord39-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord40-type         = umbrella
+pull-coord40-geometry     = distance
+pull-coord40-groups       = 67 68
+pull-coord40-dim          = Y Y Y
+pull-coord40-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord41-type         = umbrella
+pull-coord41-geometry     = distance
+pull-coord41-groups       = 69 70
+pull-coord41-dim          = Y Y Y
+pull-coord41-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord42-type         = umbrella
+pull-coord42-geometry     = transformation
+pull-coord42-expression   = max(0.35, 0.3333333333333333 * min(x37, x38) + 0.3333333333333333 * min(x39, x40) + 0.3333333333333333 * x41)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord42-init         = 0.35    ; restrains the average distance
+pull-coord42-k            = 200000
+
+
+pull-coord43-type         = umbrella
+pull-coord43-geometry     = distance
+pull-coord43-groups       = 71 72
+pull-coord43-dim          = Y Y Y
+pull-coord43-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord44-type         = umbrella
+pull-coord44-geometry     = distance
+pull-coord44-groups       = 73 74
+pull-coord44-dim          = Y Y Y
+pull-coord44-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord45-type         = umbrella
+pull-coord45-geometry     = distance
+pull-coord45-groups       = 75 76
+pull-coord45-dim          = Y Y Y
+pull-coord45-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord46-type         = umbrella
+pull-coord46-geometry     = distance
+pull-coord46-groups       = 77 78
+pull-coord46-dim          = Y Y Y
+pull-coord46-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord47-type         = umbrella
+pull-coord47-geometry     = distance
+pull-coord47-groups       = 79 80
+pull-coord47-dim          = Y Y Y
+pull-coord47-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord48-type         = umbrella
+pull-coord48-geometry     = transformation
+pull-coord48-expression   = max(0.35, 0.3333333333333333 * min(x43, x44) + 0.3333333333333333 * min(x45, x46) + 0.3333333333333333 * x47)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord48-init         = 0.35    ; restrains the average distance
+pull-coord48-k            = 200000
+
+
+pull-coord49-type         = umbrella
+pull-coord49-geometry     = distance
+pull-coord49-groups       = 81 82
+pull-coord49-dim          = Y Y Y
+pull-coord49-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord50-type         = umbrella
+pull-coord50-geometry     = distance
+pull-coord50-groups       = 83 84
+pull-coord50-dim          = Y Y Y
+pull-coord50-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord51-type         = umbrella
+pull-coord51-geometry     = distance
+pull-coord51-groups       = 85 86
+pull-coord51-dim          = Y Y Y
+pull-coord51-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord52-type         = umbrella
+pull-coord52-geometry     = distance
+pull-coord52-groups       = 87 88
+pull-coord52-dim          = Y Y Y
+pull-coord52-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord53-type         = umbrella
+pull-coord53-geometry     = distance
+pull-coord53-groups       = 89 90
+pull-coord53-dim          = Y Y Y
+pull-coord53-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord54-type         = umbrella
+pull-coord54-geometry     = transformation
+pull-coord54-expression   = max(0.35, 0.3333333333333333 * min(x49, x50) + 0.3333333333333333 * min(x51, x52) + 0.3333333333333333 * x53)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord54-init         = 0.35    ; restrains the average distance
+pull-coord54-k            = 200000
+
+
+pull-coord55-type         = umbrella
+pull-coord55-geometry     = distance
+pull-coord55-groups       = 91 92
+pull-coord55-dim          = Y Y Y
+pull-coord55-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord56-type         = umbrella
+pull-coord56-geometry     = distance
+pull-coord56-groups       = 93 94
+pull-coord56-dim          = Y Y Y
+pull-coord56-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord57-type         = umbrella
+pull-coord57-geometry     = distance
+pull-coord57-groups       = 95 96
+pull-coord57-dim          = Y Y Y
+pull-coord57-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord58-type         = umbrella
+pull-coord58-geometry     = distance
+pull-coord58-groups       = 97 98
+pull-coord58-dim          = Y Y Y
+pull-coord58-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord59-type         = umbrella
+pull-coord59-geometry     = distance
+pull-coord59-groups       = 99 100
+pull-coord59-dim          = Y Y Y
+pull-coord59-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord60-type         = umbrella
+pull-coord60-geometry     = transformation
+pull-coord60-expression   = max(0.35, 0.3333333333333333 * min(x55, x56) + 0.3333333333333333 * min(x57, x58) + 0.3333333333333333 * x59)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord60-init         = 0.35    ; restrains the average distance
+pull-coord60-k            = 200000
+
+
+pull-coord61-type         = umbrella
+pull-coord61-geometry     = distance
+pull-coord61-groups       = 101 102
+pull-coord61-dim          = Y Y Y
+pull-coord61-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord62-type         = umbrella
+pull-coord62-geometry     = distance
+pull-coord62-groups       = 103 104
+pull-coord62-dim          = Y Y Y
+pull-coord62-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord63-type         = umbrella
+pull-coord63-geometry     = distance
+pull-coord63-groups       = 105 106
+pull-coord63-dim          = Y Y Y
+pull-coord63-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord64-type         = umbrella
+pull-coord64-geometry     = distance
+pull-coord64-groups       = 107 108
+pull-coord64-dim          = Y Y Y
+pull-coord64-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord65-type         = umbrella
+pull-coord65-geometry     = distance
+pull-coord65-groups       = 109 110
+pull-coord65-dim          = Y Y Y
+pull-coord65-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord66-type         = umbrella
+pull-coord66-geometry     = transformation
+pull-coord66-expression   = max(0.35, 0.3333333333333333 * min(x61, x62) + 0.3333333333333333 * min(x63, x64) + 0.3333333333333333 * x65)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord66-init         = 0.35    ; restrains the average distance
+pull-coord66-k            = 200000
+
+
+pull-coord67-type         = umbrella
+pull-coord67-geometry     = distance
+pull-coord67-groups       = 111 112
+pull-coord67-dim          = Y Y Y
+pull-coord67-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord68-type         = umbrella
+pull-coord68-geometry     = distance
+pull-coord68-groups       = 113 114
+pull-coord68-dim          = Y Y Y
+pull-coord68-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord69-type         = umbrella
+pull-coord69-geometry     = distance
+pull-coord69-groups       = 115 116
+pull-coord69-dim          = Y Y Y
+pull-coord69-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord70-type         = umbrella
+pull-coord70-geometry     = distance
+pull-coord70-groups       = 117 118
+pull-coord70-dim          = Y Y Y
+pull-coord70-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord71-type         = umbrella
+pull-coord71-geometry     = distance
+pull-coord71-groups       = 119 120
+pull-coord71-dim          = Y Y Y
+pull-coord71-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord72-type         = umbrella
+pull-coord72-geometry     = transformation
+pull-coord72-expression   = max(0.35, 0.3333333333333333 * min(x67, x68) + 0.3333333333333333 * min(x69, x70) + 0.3333333333333333 * x71)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord72-init         = 0.35    ; restrains the average distance
+pull-coord72-k            = 200000
+
+
+pull-coord73-type         = umbrella
+pull-coord73-geometry     = distance
+pull-coord73-groups       = 121 122
+pull-coord73-dim          = Y Y Y
+pull-coord73-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord74-type         = umbrella
+pull-coord74-geometry     = distance
+pull-coord74-groups       = 123 124
+pull-coord74-dim          = Y Y Y
+pull-coord74-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord75-type         = umbrella
+pull-coord75-geometry     = distance
+pull-coord75-groups       = 125 126
+pull-coord75-dim          = Y Y Y
+pull-coord75-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord76-type         = umbrella
+pull-coord76-geometry     = distance
+pull-coord76-groups       = 127 128
+pull-coord76-dim          = Y Y Y
+pull-coord76-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord77-type         = umbrella
+pull-coord77-geometry     = distance
+pull-coord77-groups       = 129 130
+pull-coord77-dim          = Y Y Y
+pull-coord77-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord78-type         = umbrella
+pull-coord78-geometry     = transformation
+pull-coord78-expression   = max(0.35, 0.3333333333333333 * min(x73, x74) + 0.3333333333333333 * min(x75, x76) + 0.3333333333333333 * x77)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord78-init         = 0.35    ; restrains the average distance
+pull-coord78-k            = 200000
+
+
+pull-coord79-type         = umbrella
+pull-coord79-geometry     = distance
+pull-coord79-groups       = 131 132
+pull-coord79-dim          = Y Y Y
+pull-coord79-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord80-type         = umbrella
+pull-coord80-geometry     = distance
+pull-coord80-groups       = 133 134
+pull-coord80-dim          = Y Y Y
+pull-coord80-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord81-type         = umbrella
+pull-coord81-geometry     = distance
+pull-coord81-groups       = 135 136
+pull-coord81-dim          = Y Y Y
+pull-coord81-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord82-type         = umbrella
+pull-coord82-geometry     = distance
+pull-coord82-groups       = 137 138
+pull-coord82-dim          = Y Y Y
+pull-coord82-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord83-type         = umbrella
+pull-coord83-geometry     = distance
+pull-coord83-groups       = 139 140
+pull-coord83-dim          = Y Y Y
+pull-coord83-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord84-type         = umbrella
+pull-coord84-geometry     = transformation
+pull-coord84-expression   = max(0.35, 0.3333333333333333 * min(x79, x80) + 0.3333333333333333 * min(x81, x82) + 0.3333333333333333 * x83)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord84-init         = 0.35    ; restrains the average distance
+pull-coord84-k            = 200000
+
+
+pull-coord85-type         = umbrella
+pull-coord85-geometry     = distance
+pull-coord85-groups       = 141 142
+pull-coord85-dim          = Y Y Y
+pull-coord85-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord86-type         = umbrella
+pull-coord86-geometry     = distance
+pull-coord86-groups       = 143 144
+pull-coord86-dim          = Y Y Y
+pull-coord86-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord87-type         = umbrella
+pull-coord87-geometry     = distance
+pull-coord87-groups       = 145 146
+pull-coord87-dim          = Y Y Y
+pull-coord87-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord88-type         = umbrella
+pull-coord88-geometry     = distance
+pull-coord88-groups       = 147 148
+pull-coord88-dim          = Y Y Y
+pull-coord88-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord89-type         = umbrella
+pull-coord89-geometry     = distance
+pull-coord89-groups       = 149 150
+pull-coord89-dim          = Y Y Y
+pull-coord89-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord90-type         = umbrella
+pull-coord90-geometry     = transformation
+pull-coord90-expression   = max(0.35, 0.3333333333333333 * min(x85, x86) + 0.3333333333333333 * min(x87, x88) + 0.3333333333333333 * x89)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord90-init         = 0.35    ; restrains the average distance
+pull-coord90-k            = 200000
+
+
+pull-coord91-type         = umbrella
+pull-coord91-geometry     = distance
+pull-coord91-groups       = 151 152
+pull-coord91-dim          = Y Y Y
+pull-coord91-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord92-type         = umbrella
+pull-coord92-geometry     = distance
+pull-coord92-groups       = 153 154
+pull-coord92-dim          = Y Y Y
+pull-coord92-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord93-type         = umbrella
+pull-coord93-geometry     = distance
+pull-coord93-groups       = 155 156
+pull-coord93-dim          = Y Y Y
+pull-coord93-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord94-type         = umbrella
+pull-coord94-geometry     = distance
+pull-coord94-groups       = 157 158
+pull-coord94-dim          = Y Y Y
+pull-coord94-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord95-type         = umbrella
+pull-coord95-geometry     = distance
+pull-coord95-groups       = 159 160
+pull-coord95-dim          = Y Y Y
+pull-coord95-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord96-type         = umbrella
+pull-coord96-geometry     = transformation
+pull-coord96-expression   = max(0.35, 0.3333333333333333 * min(x91, x92) + 0.3333333333333333 * min(x93, x94) + 0.3333333333333333 * x95)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord96-init         = 0.35    ; restrains the average distance
+pull-coord96-k            = 200000
+
+
+pull-coord97-type         = umbrella
+pull-coord97-geometry     = distance
+pull-coord97-groups       = 161 162
+pull-coord97-dim          = Y Y Y
+pull-coord97-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord98-type         = umbrella
+pull-coord98-geometry     = distance
+pull-coord98-groups       = 163 164
+pull-coord98-dim          = Y Y Y
+pull-coord98-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord99-type         = umbrella
+pull-coord99-geometry     = distance
+pull-coord99-groups       = 165 166
+pull-coord99-dim          = Y Y Y
+pull-coord99-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord100-type         = umbrella
+pull-coord100-geometry     = distance
+pull-coord100-groups       = 167 168
+pull-coord100-dim          = Y Y Y
+pull-coord100-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord101-type         = umbrella
+pull-coord101-geometry     = distance
+pull-coord101-groups       = 169 170
+pull-coord101-dim          = Y Y Y
+pull-coord101-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord102-type         = umbrella
+pull-coord102-geometry     = transformation
+pull-coord102-expression   = max(0.35, 0.3333333333333333 * min(x97, x98) + 0.3333333333333333 * min(x99, x100) + 0.3333333333333333 * x101)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord102-init         = 0.35    ; restrains the average distance
+pull-coord102-k            = 200000
+
+
+pull-coord103-type         = umbrella
+pull-coord103-geometry     = distance
+pull-coord103-groups       = 171 172
+pull-coord103-dim          = Y Y Y
+pull-coord103-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord104-type         = umbrella
+pull-coord104-geometry     = distance
+pull-coord104-groups       = 173 174
+pull-coord104-dim          = Y Y Y
+pull-coord104-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord105-type         = umbrella
+pull-coord105-geometry     = distance
+pull-coord105-groups       = 175 176
+pull-coord105-dim          = Y Y Y
+pull-coord105-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord106-type         = umbrella
+pull-coord106-geometry     = distance
+pull-coord106-groups       = 177 178
+pull-coord106-dim          = Y Y Y
+pull-coord106-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord107-type         = umbrella
+pull-coord107-geometry     = distance
+pull-coord107-groups       = 179 180
+pull-coord107-dim          = Y Y Y
+pull-coord107-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord108-type         = umbrella
+pull-coord108-geometry     = transformation
+pull-coord108-expression   = max(0.35, 0.3333333333333333 * min(x103, x104) + 0.3333333333333333 * min(x105, x106) + 0.3333333333333333 * x107)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord108-init         = 0.35    ; restrains the average distance
+pull-coord108-k            = 200000
+
+
+pull-coord109-type         = umbrella
+pull-coord109-geometry     = distance
+pull-coord109-groups       = 181 182
+pull-coord109-dim          = Y Y Y
+pull-coord109-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord110-type         = umbrella
+pull-coord110-geometry     = distance
+pull-coord110-groups       = 183 184
+pull-coord110-dim          = Y Y Y
+pull-coord110-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord111-type         = umbrella
+pull-coord111-geometry     = distance
+pull-coord111-groups       = 185 186
+pull-coord111-dim          = Y Y Y
+pull-coord111-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord112-type         = umbrella
+pull-coord112-geometry     = distance
+pull-coord112-groups       = 187 188
+pull-coord112-dim          = Y Y Y
+pull-coord112-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord113-type         = umbrella
+pull-coord113-geometry     = distance
+pull-coord113-groups       = 189 190
+pull-coord113-dim          = Y Y Y
+pull-coord113-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord114-type         = umbrella
+pull-coord114-geometry     = transformation
+pull-coord114-expression   = max(0.35, 0.3333333333333333 * min(x109, x110) + 0.3333333333333333 * min(x111, x112) + 0.3333333333333333 * x113)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord114-init         = 0.35    ; restrains the average distance
+pull-coord114-k            = 200000
+
+
+pull-coord115-type         = umbrella
+pull-coord115-geometry     = distance
+pull-coord115-groups       = 191 192
+pull-coord115-dim          = Y Y Y
+pull-coord115-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord116-type         = umbrella
+pull-coord116-geometry     = distance
+pull-coord116-groups       = 193 194
+pull-coord116-dim          = Y Y Y
+pull-coord116-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord117-type         = umbrella
+pull-coord117-geometry     = distance
+pull-coord117-groups       = 195 196
+pull-coord117-dim          = Y Y Y
+pull-coord117-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord118-type         = umbrella
+pull-coord118-geometry     = distance
+pull-coord118-groups       = 197 198
+pull-coord118-dim          = Y Y Y
+pull-coord118-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord119-type         = umbrella
+pull-coord119-geometry     = distance
+pull-coord119-groups       = 199 200
+pull-coord119-dim          = Y Y Y
+pull-coord119-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord120-type         = umbrella
+pull-coord120-geometry     = transformation
+pull-coord120-expression   = max(0.35, 0.3333333333333333 * min(x115, x116) + 0.3333333333333333 * min(x117, x118) + 0.3333333333333333 * x119)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord120-init         = 0.35    ; restrains the average distance
+pull-coord120-k            = 200000
+
+
+pull-coord121-type         = umbrella
+pull-coord121-geometry     = distance
+pull-coord121-groups       = 201 202
+pull-coord121-dim          = Y Y Y
+pull-coord121-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord122-type         = umbrella
+pull-coord122-geometry     = distance
+pull-coord122-groups       = 203 204
+pull-coord122-dim          = Y Y Y
+pull-coord122-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord123-type         = umbrella
+pull-coord123-geometry     = distance
+pull-coord123-groups       = 205 206
+pull-coord123-dim          = Y Y Y
+pull-coord123-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord124-type         = umbrella
+pull-coord124-geometry     = distance
+pull-coord124-groups       = 207 208
+pull-coord124-dim          = Y Y Y
+pull-coord124-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord125-type         = umbrella
+pull-coord125-geometry     = distance
+pull-coord125-groups       = 209 210
+pull-coord125-dim          = Y Y Y
+pull-coord125-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord126-type         = umbrella
+pull-coord126-geometry     = transformation
+pull-coord126-expression   = max(0.35, 0.3333333333333333 * min(x121, x122) + 0.3333333333333333 * min(x123, x124) + 0.3333333333333333 * x125)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord126-init         = 0.35    ; restrains the average distance
+pull-coord126-k            = 200000
+
+
+pull-coord127-type         = umbrella
+pull-coord127-geometry     = distance
+pull-coord127-groups       = 211 212
+pull-coord127-dim          = Y Y Y
+pull-coord127-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord128-type         = umbrella
+pull-coord128-geometry     = distance
+pull-coord128-groups       = 213 214
+pull-coord128-dim          = Y Y Y
+pull-coord128-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord129-type         = umbrella
+pull-coord129-geometry     = distance
+pull-coord129-groups       = 215 216
+pull-coord129-dim          = Y Y Y
+pull-coord129-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord130-type         = umbrella
+pull-coord130-geometry     = transformation
+pull-coord130-expression   = max(0.35, 0.5 * min(x127, x128) + 0.5 * x129)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord130-init         = 0.35    ; restrains the average distance
+pull-coord130-k            = 200000
+
+
+pull-coord131-type         = umbrella
+pull-coord131-geometry     = distance
+pull-coord131-groups       = 217 218
+pull-coord131-dim          = Y Y Y
+pull-coord131-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord132-type         = umbrella
+pull-coord132-geometry     = distance
+pull-coord132-groups       = 219 220
+pull-coord132-dim          = Y Y Y
+pull-coord132-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord133-type         = umbrella
+pull-coord133-geometry     = distance
+pull-coord133-groups       = 221 222
+pull-coord133-dim          = Y Y Y
+pull-coord133-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord134-type         = umbrella
+pull-coord134-geometry     = transformation
+pull-coord134-expression   = max(0.35, 0.5 * min(x131, x132) + 0.5 * x133)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord134-init         = 0.35    ; restrains the average distance
+pull-coord134-k            = 200000
+
+
+pull-coord135-type         = umbrella
+pull-coord135-geometry     = distance
+pull-coord135-groups       = 223 224
+pull-coord135-dim          = Y Y Y
+pull-coord135-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord136-type         = umbrella
+pull-coord136-geometry     = distance
+pull-coord136-groups       = 225 226
+pull-coord136-dim          = Y Y Y
+pull-coord136-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord137-type         = umbrella
+pull-coord137-geometry     = distance
+pull-coord137-groups       = 227 228
+pull-coord137-dim          = Y Y Y
+pull-coord137-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord138-type         = umbrella
+pull-coord138-geometry     = transformation
+pull-coord138-expression   = max(0.35, 0.5 * min(x135, x136) + 0.5 * x137)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord138-init         = 0.35    ; restrains the average distance
+pull-coord138-k            = 200000
+
+
+pull-coord139-type         = umbrella
+pull-coord139-geometry     = distance
+pull-coord139-groups       = 229 230
+pull-coord139-dim          = Y Y Y
+pull-coord139-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord140-type         = umbrella
+pull-coord140-geometry     = distance
+pull-coord140-groups       = 231 232
+pull-coord140-dim          = Y Y Y
+pull-coord140-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord141-type         = umbrella
+pull-coord141-geometry     = distance
+pull-coord141-groups       = 233 234
+pull-coord141-dim          = Y Y Y
+pull-coord141-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord142-type         = umbrella
+pull-coord142-geometry     = transformation
+pull-coord142-expression   = max(0.35, 0.5 * min(x139, x140) + 0.5 * x141)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord142-init         = 0.35    ; restrains the average distance
+pull-coord142-k            = 200000
+
+
+pull-coord143-type         = umbrella
+pull-coord143-geometry     = distance
+pull-coord143-groups       = 235 236
+pull-coord143-dim          = Y Y Y
+pull-coord143-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord144-type         = umbrella
+pull-coord144-geometry     = distance
+pull-coord144-groups       = 237 238
+pull-coord144-dim          = Y Y Y
+pull-coord144-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord145-type         = umbrella
+pull-coord145-geometry     = distance
+pull-coord145-groups       = 239 240
+pull-coord145-dim          = Y Y Y
+pull-coord145-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord146-type         = umbrella
+pull-coord146-geometry     = transformation
+pull-coord146-expression   = max(0.35, 0.5 * min(x143, x144) + 0.5 * x145)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord146-init         = 0.35    ; restrains the average distance
+pull-coord146-k            = 200000
+
+
+pull-coord147-type         = umbrella
+pull-coord147-geometry     = distance
+pull-coord147-groups       = 241 242
+pull-coord147-dim          = Y Y Y
+pull-coord147-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord148-type         = umbrella
+pull-coord148-geometry     = distance
+pull-coord148-groups       = 243 244
+pull-coord148-dim          = Y Y Y
+pull-coord148-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord149-type         = umbrella
+pull-coord149-geometry     = distance
+pull-coord149-groups       = 245 246
+pull-coord149-dim          = Y Y Y
+pull-coord149-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord150-type         = umbrella
+pull-coord150-geometry     = transformation
+pull-coord150-expression   = max(0.35, 0.5 * min(x147, x148) + 0.5 * x149)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord150-init         = 0.35    ; restrains the average distance
+pull-coord150-k            = 200000
+
+
+pull-coord151-type         = umbrella
+pull-coord151-geometry     = distance
+pull-coord151-groups       = 247 248
+pull-coord151-dim          = Y Y Y
+pull-coord151-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord152-type         = umbrella
+pull-coord152-geometry     = distance
+pull-coord152-groups       = 249 250
+pull-coord152-dim          = Y Y Y
+pull-coord152-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord153-type         = umbrella
+pull-coord153-geometry     = distance
+pull-coord153-groups       = 251 252
+pull-coord153-dim          = Y Y Y
+pull-coord153-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord154-type         = umbrella
+pull-coord154-geometry     = transformation
+pull-coord154-expression   = max(0.35, 0.5 * min(x151, x152) + 0.5 * x153)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord154-init         = 0.35    ; restrains the average distance
+pull-coord154-k            = 200000
+
+
+pull-coord155-type         = umbrella
+pull-coord155-geometry     = distance
+pull-coord155-groups       = 253 254
+pull-coord155-dim          = Y Y Y
+pull-coord155-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord156-type         = umbrella
+pull-coord156-geometry     = distance
+pull-coord156-groups       = 255 256
+pull-coord156-dim          = Y Y Y
+pull-coord156-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord157-type         = umbrella
+pull-coord157-geometry     = distance
+pull-coord157-groups       = 257 258
+pull-coord157-dim          = Y Y Y
+pull-coord157-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord158-type         = umbrella
+pull-coord158-geometry     = transformation
+pull-coord158-expression   = max(0.35, 0.5 * min(x155, x156) + 0.5 * x157)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord158-init         = 0.35    ; restrains the average distance
+pull-coord158-k            = 200000
+
+
+pull-coord159-type         = umbrella
+pull-coord159-geometry     = distance
+pull-coord159-groups       = 259 260
+pull-coord159-dim          = Y Y Y
+pull-coord159-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord160-type         = umbrella
+pull-coord160-geometry     = distance
+pull-coord160-groups       = 261 262
+pull-coord160-dim          = Y Y Y
+pull-coord160-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord161-type         = umbrella
+pull-coord161-geometry     = distance
+pull-coord161-groups       = 263 264
+pull-coord161-dim          = Y Y Y
+pull-coord161-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord162-type         = umbrella
+pull-coord162-geometry     = transformation
+pull-coord162-expression   = max(0.35, 0.5 * min(x159, x160) + 0.5 * x161)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord162-init         = 0.35    ; restrains the average distance
+pull-coord162-k            = 200000
+
+
+pull-coord163-type         = umbrella
+pull-coord163-geometry     = distance
+pull-coord163-groups       = 265 266
+pull-coord163-dim          = Y Y Y
+pull-coord163-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord164-type         = umbrella
+pull-coord164-geometry     = distance
+pull-coord164-groups       = 267 268
+pull-coord164-dim          = Y Y Y
+pull-coord164-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord165-type         = umbrella
+pull-coord165-geometry     = distance
+pull-coord165-groups       = 269 270
+pull-coord165-dim          = Y Y Y
+pull-coord165-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord166-type         = umbrella
+pull-coord166-geometry     = transformation
+pull-coord166-expression   = max(0.35, 0.5 * min(x163, x164) + 0.5 * x165)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord166-init         = 0.35    ; restrains the average distance
+pull-coord166-k            = 200000
+
+
+pull-coord167-type         = umbrella
+pull-coord167-geometry     = distance
+pull-coord167-groups       = 271 272
+pull-coord167-dim          = Y Y Y
+pull-coord167-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord168-type         = umbrella
+pull-coord168-geometry     = distance
+pull-coord168-groups       = 273 274
+pull-coord168-dim          = Y Y Y
+pull-coord168-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord169-type         = umbrella
+pull-coord169-geometry     = distance
+pull-coord169-groups       = 275 276
+pull-coord169-dim          = Y Y Y
+pull-coord169-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord170-type         = umbrella
+pull-coord170-geometry     = transformation
+pull-coord170-expression   = max(0.35, 0.5 * min(x167, x168) + 0.5 * x169)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord170-init         = 0.35    ; restrains the average distance
+pull-coord170-k            = 200000
+
+
+pull-coord171-type         = umbrella
+pull-coord171-geometry     = distance
+pull-coord171-groups       = 277 278
+pull-coord171-dim          = Y Y Y
+pull-coord171-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord172-type         = umbrella
+pull-coord172-geometry     = distance
+pull-coord172-groups       = 279 280
+pull-coord172-dim          = Y Y Y
+pull-coord172-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord173-type         = umbrella
+pull-coord173-geometry     = distance
+pull-coord173-groups       = 281 282
+pull-coord173-dim          = Y Y Y
+pull-coord173-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord174-type         = umbrella
+pull-coord174-geometry     = transformation
+pull-coord174-expression   = max(0.35, 0.5 * min(x171, x172) + 0.5 * x173)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord174-init         = 0.35    ; restrains the average distance
+pull-coord174-k            = 200000
+
+
+pull-coord175-type         = umbrella
+pull-coord175-geometry     = distance
+pull-coord175-groups       = 283 284
+pull-coord175-dim          = Y Y Y
+pull-coord175-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord176-type         = umbrella
+pull-coord176-geometry     = distance
+pull-coord176-groups       = 285 286
+pull-coord176-dim          = Y Y Y
+pull-coord176-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord177-type         = umbrella
+pull-coord177-geometry     = distance
+pull-coord177-groups       = 287 288
+pull-coord177-dim          = Y Y Y
+pull-coord177-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord178-type         = umbrella
+pull-coord178-geometry     = transformation
+pull-coord178-expression   = max(0.35, 0.5 * min(x175, x176) + 0.5 * x177)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord178-init         = 0.35    ; restrains the average distance
+pull-coord178-k            = 200000
+
+
+pull-coord179-type         = umbrella
+pull-coord179-geometry     = distance
+pull-coord179-groups       = 289 290
+pull-coord179-dim          = Y Y Y
+pull-coord179-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord180-type         = umbrella
+pull-coord180-geometry     = distance
+pull-coord180-groups       = 291 292
+pull-coord180-dim          = Y Y Y
+pull-coord180-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord181-type         = umbrella
+pull-coord181-geometry     = distance
+pull-coord181-groups       = 293 294
+pull-coord181-dim          = Y Y Y
+pull-coord181-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord182-type         = umbrella
+pull-coord182-geometry     = transformation
+pull-coord182-expression   = max(0.35, 0.5 * min(x179, x180) + 0.5 * x181)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord182-init         = 0.35    ; restrains the average distance
+pull-coord182-k            = 200000
+
+
+pull-coord183-type         = umbrella
+pull-coord183-geometry     = distance
+pull-coord183-groups       = 295 296
+pull-coord183-dim          = Y Y Y
+pull-coord183-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord184-type         = umbrella
+pull-coord184-geometry     = distance
+pull-coord184-groups       = 297 298
+pull-coord184-dim          = Y Y Y
+pull-coord184-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord185-type         = umbrella
+pull-coord185-geometry     = distance
+pull-coord185-groups       = 299 300
+pull-coord185-dim          = Y Y Y
+pull-coord185-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord186-type         = umbrella
+pull-coord186-geometry     = transformation
+pull-coord186-expression   = max(0.35, 0.5 * min(x183, x184) + 0.5 * x185)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord186-init         = 0.35    ; restrains the average distance
+pull-coord186-k            = 200000
+
+
+pull-coord187-type         = umbrella
+pull-coord187-geometry     = distance
+pull-coord187-groups       = 301 302
+pull-coord187-dim          = Y Y Y
+pull-coord187-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord188-type         = umbrella
+pull-coord188-geometry     = distance
+pull-coord188-groups       = 303 304
+pull-coord188-dim          = Y Y Y
+pull-coord188-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord189-type         = umbrella
+pull-coord189-geometry     = distance
+pull-coord189-groups       = 305 306
+pull-coord189-dim          = Y Y Y
+pull-coord189-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord190-type         = umbrella
+pull-coord190-geometry     = transformation
+pull-coord190-expression   = max(0.35, 0.5 * min(x187, x188) + 0.5 * x189)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord190-init         = 0.35    ; restrains the average distance
+pull-coord190-k            = 200000
+
+
+pull-coord191-type         = umbrella
+pull-coord191-geometry     = distance
+pull-coord191-groups       = 307 308
+pull-coord191-dim          = Y Y Y
+pull-coord191-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord192-type         = umbrella
+pull-coord192-geometry     = distance
+pull-coord192-groups       = 309 310
+pull-coord192-dim          = Y Y Y
+pull-coord192-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord193-type         = umbrella
+pull-coord193-geometry     = distance
+pull-coord193-groups       = 311 312
+pull-coord193-dim          = Y Y Y
+pull-coord193-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord194-type         = umbrella
+pull-coord194-geometry     = transformation
+pull-coord194-expression   = max(0.35, 0.5 * min(x191, x192) + 0.5 * x193)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord194-init         = 0.35    ; restrains the average distance
+pull-coord194-k            = 200000
+
+
+pull-coord195-type         = umbrella
+pull-coord195-geometry     = distance
+pull-coord195-groups       = 313 314
+pull-coord195-dim          = Y Y Y
+pull-coord195-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord196-type         = umbrella
+pull-coord196-geometry     = distance
+pull-coord196-groups       = 315 316
+pull-coord196-dim          = Y Y Y
+pull-coord196-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord197-type         = umbrella
+pull-coord197-geometry     = distance
+pull-coord197-groups       = 317 318
+pull-coord197-dim          = Y Y Y
+pull-coord197-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord198-type         = umbrella
+pull-coord198-geometry     = transformation
+pull-coord198-expression   = max(0.35, 0.5 * min(x195, x196) + 0.5 * x197)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord198-init         = 0.35    ; restrains the average distance
+pull-coord198-k            = 200000
+
+
+pull-coord199-type         = umbrella
+pull-coord199-geometry     = distance
+pull-coord199-groups       = 319 320
+pull-coord199-dim          = Y Y Y
+pull-coord199-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord200-type         = umbrella
+pull-coord200-geometry     = distance
+pull-coord200-groups       = 321 322
+pull-coord200-dim          = Y Y Y
+pull-coord200-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord201-type         = umbrella
+pull-coord201-geometry     = distance
+pull-coord201-groups       = 323 324
+pull-coord201-dim          = Y Y Y
+pull-coord201-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord202-type         = umbrella
+pull-coord202-geometry     = transformation
+pull-coord202-expression   = max(0.35, 0.5 * min(x199, x200) + 0.5 * x201)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord202-init         = 0.35    ; restrains the average distance
+pull-coord202-k            = 200000
+
+
+pull-coord203-type         = umbrella
+pull-coord203-geometry     = distance
+pull-coord203-groups       = 325 326
+pull-coord203-dim          = Y Y Y
+pull-coord203-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord204-type         = umbrella
+pull-coord204-geometry     = distance
+pull-coord204-groups       = 327 328
+pull-coord204-dim          = Y Y Y
+pull-coord204-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord205-type         = umbrella
+pull-coord205-geometry     = distance
+pull-coord205-groups       = 329 330
+pull-coord205-dim          = Y Y Y
+pull-coord205-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord206-type         = umbrella
+pull-coord206-geometry     = transformation
+pull-coord206-expression   = max(0.35, 0.5 * min(x203, x204) + 0.5 * x205)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord206-init         = 0.35    ; restrains the average distance
+pull-coord206-k            = 200000
+
+
+pull-coord207-type         = umbrella
+pull-coord207-geometry     = distance
+pull-coord207-groups       = 331 332
+pull-coord207-dim          = Y Y Y
+pull-coord207-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord208-type         = umbrella
+pull-coord208-geometry     = distance
+pull-coord208-groups       = 333 334
+pull-coord208-dim          = Y Y Y
+pull-coord208-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord209-type         = umbrella
+pull-coord209-geometry     = distance
+pull-coord209-groups       = 335 336
+pull-coord209-dim          = Y Y Y
+pull-coord209-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord210-type         = umbrella
+pull-coord210-geometry     = transformation
+pull-coord210-expression   = max(0.35, 0.5 * min(x207, x208) + 0.5 * x209)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord210-init         = 0.35    ; restrains the average distance
+pull-coord210-k            = 200000
+
+
+pull-coord211-type         = umbrella
+pull-coord211-geometry     = distance
+pull-coord211-groups       = 337 338
+pull-coord211-dim          = Y Y Y
+pull-coord211-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord212-type         = umbrella
+pull-coord212-geometry     = distance
+pull-coord212-groups       = 339 340
+pull-coord212-dim          = Y Y Y
+pull-coord212-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord213-type         = umbrella
+pull-coord213-geometry     = distance
+pull-coord213-groups       = 341 342
+pull-coord213-dim          = Y Y Y
+pull-coord213-k            = 0      ; avoid forces working directly on this distance
+
+
+pull-coord214-type         = umbrella
+pull-coord214-geometry     = transformation
+pull-coord214-expression   = max(0.35, 0.5 * min(x211, x212) + 0.5 * x213)  ; x1 and x2 refer to the value of coord1 and coord2
+pull-coord214-init         = 0.35    ; restrains the average distance
+pull-coord214-k            = 200000
+
+
+pull-coord215-type         = umbrella
+pull-coord215-geometry     = distance
+pull-coord215-groups       = 343 344
+pull-coord215-dim          = Y Y Y
+pull-coord215-k            = 200000
+pull-coord215-init         = 0.16    
+
+
+pull-coord216-type         = umbrella
+pull-coord216-geometry     = distance
+pull-coord216-groups       = 345 346
+pull-coord216-dim          = Y Y Y
+pull-coord216-k            = 200000
+pull-coord216-init         = 0.16    
+
+
+pull-coord217-type         = umbrella
+pull-coord217-geometry     = distance
+pull-coord217-groups       = 347 348
+pull-coord217-dim          = Y Y Y
+pull-coord217-k            = 200000
+pull-coord217-init         = 0.16    
+
+
+pull-coord218-type         = umbrella
+pull-coord218-geometry     = distance
+pull-coord218-groups       = 349 350
+pull-coord218-dim          = Y Y Y
+pull-coord218-k            = 200000
+pull-coord218-init         = 0.25    
+
+
+pull-coord219-type         = umbrella
+pull-coord219-geometry     = distance
+pull-coord219-groups       = 351 352
+pull-coord219-dim          = Y Y Y
+pull-coord219-k            = 200000
+pull-coord219-init         = 0.16    
+
+
+pull-coord220-type         = umbrella
+pull-coord220-geometry     = distance
+pull-coord220-groups       = 353 354
+pull-coord220-dim          = Y Y Y
+pull-coord220-k            = 200000
+pull-coord220-init         = 0.16    
+
+
+pull-coord221-type         = umbrella
+pull-coord221-geometry     = distance
+pull-coord221-groups       = 355 356
+pull-coord221-dim          = Y Y Y
+pull-coord221-k            = 200000
+pull-coord221-init         = 0.16    
+
+
+pull-coord222-type         = umbrella
+pull-coord222-geometry     = distance
+pull-coord222-groups       = 357 358
+pull-coord222-dim          = Y Y Y
+pull-coord222-k            = 200000
+pull-coord222-init         = 0.16    
+
+
+pull-coord223-type         = umbrella
+pull-coord223-geometry     = distance
+pull-coord223-groups       = 359 360
+pull-coord223-dim          = Y Y Y
+pull-coord223-k            = 200000
+pull-coord223-init         = 0.16    
+
+
+pull-coord224-type         = umbrella
+pull-coord224-geometry     = distance
+pull-coord224-groups       = 361 362
+pull-coord224-dim          = Y Y Y
+pull-coord224-k            = 200000
+pull-coord224-init         = 0.16    
+
+
+pull-coord225-type         = umbrella
+pull-coord225-geometry     = distance
+pull-coord225-groups       = 363 364
+pull-coord225-dim          = Y Y Y
+pull-coord225-k            = 200000
+pull-coord225-init         = 0.16    
+
+
+pull-coord226-type         = umbrella
+pull-coord226-geometry     = distance
+pull-coord226-groups       = 365 366
+pull-coord226-dim          = Y Y Y
+pull-coord226-k            = 200000
+pull-coord226-init         = 0.16    
+
+
+pull-coord227-type         = umbrella
+pull-coord227-geometry     = distance
+pull-coord227-groups       = 367 368
+pull-coord227-dim          = Y Y Y
+pull-coord227-k            = 200000
+pull-coord227-init         = 0.16    
+
+
+pull-coord228-type         = umbrella
+pull-coord228-geometry     = distance
+pull-coord228-groups       = 369 370
+pull-coord228-dim          = Y Y Y
+pull-coord228-k            = 200000
+pull-coord228-init         = 0.16    
+
+
+pull-coord229-type         = umbrella
+pull-coord229-geometry     = distance
+pull-coord229-groups       = 371 372
+pull-coord229-dim          = Y Y Y
+pull-coord229-k            = 200000
+pull-coord229-init         = 0.16    
+
+
+pull-coord230-type         = umbrella
+pull-coord230-geometry     = distance
+pull-coord230-groups       = 373 374
+pull-coord230-dim          = Y Y Y
+pull-coord230-k            = 200000
+pull-coord230-init         = 0.16    
+
+
+pull-coord231-type         = umbrella
+pull-coord231-geometry     = distance
+pull-coord231-groups       = 375 376
+pull-coord231-dim          = Y Y Y
+pull-coord231-k            = 200000
+pull-coord231-init         = 0.16    
+
+
+pull-coord232-type         = umbrella
+pull-coord232-geometry     = distance
+pull-coord232-groups       = 377 378
+pull-coord232-dim          = Y Y Y
+pull-coord232-k            = 200000
+pull-coord232-init         = 0.16    
+
+
+pull-coord233-type         = umbrella
+pull-coord233-geometry     = distance
+pull-coord233-groups       = 379 380
+pull-coord233-dim          = Y Y Y
+pull-coord233-k            = 200000
+pull-coord233-init         = 0.16    
+
+
+pull-coord234-type         = umbrella
+pull-coord234-geometry     = distance
+pull-coord234-groups       = 381 382
+pull-coord234-dim          = Y Y Y
+pull-coord234-k            = 200000
+pull-coord234-init         = 0.16    
+
+
+pull-coord235-type         = umbrella
+pull-coord235-geometry     = distance
+pull-coord235-groups       = 383 384
+pull-coord235-dim          = Y Y Y
+pull-coord235-k            = 200000
+pull-coord235-init         = 0.16    
+
+
+pull-coord236-type         = umbrella
+pull-coord236-geometry     = distance
+pull-coord236-groups       = 385 386
+pull-coord236-dim          = Y Y Y
+pull-coord236-k            = 200000
+pull-coord236-init         = 0.16    
+
+
+pull-coord237-type         = umbrella
+pull-coord237-geometry     = distance
+pull-coord237-groups       = 387 388
+pull-coord237-dim          = Y Y Y
+pull-coord237-k            = 200000
+pull-coord237-init         = 0.16    
+
+
+pull-coord238-type         = umbrella
+pull-coord238-geometry     = distance
+pull-coord238-groups       = 389 390
+pull-coord238-dim          = Y Y Y
+pull-coord238-k            = 200000
+pull-coord238-init         = 0.16    
+
+
+pull-coord239-type         = umbrella
+pull-coord239-geometry     = distance
+pull-coord239-groups       = 391 392
+pull-coord239-dim          = Y Y Y
+pull-coord239-k            = 200000
+pull-coord239-init         = 0.16    
+
+
+pull-coord240-type         = umbrella
+pull-coord240-geometry     = distance
+pull-coord240-groups       = 393 394
+pull-coord240-dim          = Y Y Y
+pull-coord240-k            = 200000
+pull-coord240-init         = 0.16    
+
+
+pull-coord241-type         = umbrella
+pull-coord241-geometry     = distance
+pull-coord241-groups       = 395 396
+pull-coord241-dim          = Y Y Y
+pull-coord241-k            = 200000
+pull-coord241-init         = 0.16    
+
+
+pull-coord242-type         = umbrella
+pull-coord242-geometry     = distance
+pull-coord242-groups       = 397 398
+pull-coord242-dim          = Y Y Y
+pull-coord242-k            = 200000
+pull-coord242-init         = 0.16    
+
+
+pull-coord243-type         = umbrella
+pull-coord243-geometry     = distance
+pull-coord243-groups       = 399 400
+pull-coord243-dim          = Y Y Y
+pull-coord243-k            = 200000
+pull-coord243-init         = 0.16    
+
+
+pull-coord244-type         = umbrella
+pull-coord244-geometry     = distance
+pull-coord244-groups       = 401 402
+pull-coord244-dim          = Y Y Y
+pull-coord244-k            = 200000
+pull-coord244-init         = 0.16    
+
+
+pull-coord245-type         = umbrella
+pull-coord245-geometry     = distance
+pull-coord245-groups       = 403 404
+pull-coord245-dim          = Y Y Y
+pull-coord245-k            = 200000
+pull-coord245-init         = 0.16    
+
+
+pull-coord246-type         = umbrella
+pull-coord246-geometry     = distance
+pull-coord246-groups       = 405 406
+pull-coord246-dim          = Y Y Y
+pull-coord246-k            = 200000
+pull-coord246-init         = 0.16    
+
+
+pull-coord247-type         = umbrella
+pull-coord247-geometry     = distance
+pull-coord247-groups       = 407 408
+pull-coord247-dim          = Y Y Y
+pull-coord247-k            = 200000
+pull-coord247-init         = 0.16    
+
+
+pull-coord248-type         = umbrella
+pull-coord248-geometry     = distance
+pull-coord248-groups       = 409 410
+pull-coord248-dim          = Y Y Y
+pull-coord248-k            = 200000
+pull-coord248-init         = 0.16    
+
+
+pull-coord249-type         = umbrella
+pull-coord249-geometry     = distance
+pull-coord249-groups       = 411 412
+pull-coord249-dim          = Y Y Y
+pull-coord249-k            = 200000
+pull-coord249-init         = 0.16    
+
+
+pull-coord250-type         = umbrella
+pull-coord250-geometry     = distance
+pull-coord250-groups       = 413 414
+pull-coord250-dim          = Y Y Y
+pull-coord250-k            = 200000
+pull-coord250-init         = 0.16    
+
+
+pull-coord251-type         = umbrella
+pull-coord251-geometry     = distance
+pull-coord251-groups       = 415 416
+pull-coord251-dim          = Y Y Y
+pull-coord251-k            = 200000
+pull-coord251-init         = 0.16    
+
+
+pull-coord252-type         = umbrella
+pull-coord252-geometry     = distance
+pull-coord252-groups       = 417 418
+pull-coord252-dim          = Y Y Y
+pull-coord252-k            = 200000
+pull-coord252-init         = 0.16    
+
+
+pull-coord253-type         = umbrella
+pull-coord253-geometry     = distance
+pull-coord253-groups       = 419 420
+pull-coord253-dim          = Y Y Y
+pull-coord253-k            = 200000
+pull-coord253-init         = 0.16    
+
+
+pull-coord254-type         = umbrella
+pull-coord254-geometry     = distance
+pull-coord254-groups       = 421 422
+pull-coord254-dim          = Y Y Y
+pull-coord254-k            = 200000
+pull-coord254-init         = 0.16    
+
+
+pull-coord255-type         = umbrella
+pull-coord255-geometry     = distance
+pull-coord255-groups       = 423 424
+pull-coord255-dim          = Y Y Y
+pull-coord255-k            = 200000
+pull-coord255-init         = 0.16    
+
+
+pull-coord256-type         = umbrella
+pull-coord256-geometry     = distance
+pull-coord256-groups       = 425 426
+pull-coord256-dim          = Y Y Y
+pull-coord256-k            = 200000
+pull-coord256-init         = 0.16    
+
+
+pull-coord257-type         = umbrella
+pull-coord257-geometry     = distance
+pull-coord257-groups       = 427 428
+pull-coord257-dim          = Y Y Y
+pull-coord257-k            = 200000
+pull-coord257-init         = 0.16    
+
+
+pull-coord258-type         = umbrella
+pull-coord258-geometry     = distance
+pull-coord258-groups       = 429 430
+pull-coord258-dim          = Y Y Y
+pull-coord258-k            = 200000
+pull-coord258-init         = 0.16    
+
+
+pull-coord259-type         = umbrella
+pull-coord259-geometry     = distance
+pull-coord259-groups       = 431 432
+pull-coord259-dim          = Y Y Y
+pull-coord259-k            = 200000
+pull-coord259-init         = 0.16    
+
+
+pull-coord260-type         = umbrella
+pull-coord260-geometry     = distance
+pull-coord260-groups       = 433 434
+pull-coord260-dim          = Y Y Y
+pull-coord260-k            = 200000
+pull-coord260-init         = 0.16    
+
+
+pull-coord261-type         = umbrella
+pull-coord261-geometry     = distance
+pull-coord261-groups       = 435 436
+pull-coord261-dim          = Y Y Y
+pull-coord261-k            = 200000
+pull-coord261-init         = 0.16    
+
+
+pull-coord262-type         = umbrella
+pull-coord262-geometry     = distance
+pull-coord262-groups       = 437 438
+pull-coord262-dim          = Y Y Y
+pull-coord262-k            = 200000
+pull-coord262-init         = 0.16    
+
+
+pull-coord263-type         = umbrella
+pull-coord263-geometry     = distance
+pull-coord263-groups       = 439 440
+pull-coord263-dim          = Y Y Y
+pull-coord263-k            = 200000
+pull-coord263-init         = 0.16    
+
+
+pull-nstxout            = 20
+pull-nstfout            = 0 ; dont think we need the force, its implied by the position
+

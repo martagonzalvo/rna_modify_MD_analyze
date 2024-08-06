@@ -1,0 +1,38 @@
+HEADER mG.bgf converted to pdb format using bgf2pdb.pl
+REMARK BGF file created by Cerius2
+REMARK BGF file created by Cerius2
+REMARK BGF file created by Cerius2
+REMARK Created by mgethers on Mon Aug 22 10:44:46 2016
+HETATM    1 C5'   mG A   1     -46.856 -57.450  79.525
+HETATM    2 H5'1  mG A   1     -46.751 -58.362  79.768
+HETATM    3 H5'2  mG A   1     -47.148 -56.893  80.415
+HETATM    4 C4'   mG A   1     -45.374 -57.010  79.128
+HETATM    5 H4'   mG A   1     -44.483 -57.263  79.703
+HETATM    6 O4'   mG A   1     -45.518 -58.078  78.209
+HETATM    7 C1'   mG A   1     -44.916 -57.726  76.966
+HETATM    8 H1'   mG A   1     -44.194 -58.485  76.665
+HETATM    9 N9    mG A   1     -45.901 -57.725  75.867
+HETATM   10 C8    mG A   1     -47.264 -57.703  75.920
+HETATM   11 H8    mG A   1     -47.776 -57.653  76.869
+HETATM   12 N7    mG A   1     -47.828 -57.748  74.746
+HETATM   13 C5    mG A   1     -46.765 -57.816  73.860
+HETATM   14 C6    mG A   1     -46.740 -57.897  72.450
+HETATM   15 O6    mG A   1     -47.694 -57.932  71.672
+HETATM   16 N1    mG A   1     -45.458 -57.927  71.948
+HETATM   17 H1    mG A   1     -45.339 -57.986  70.957
+HETATM   18 C2    mG A   1     -44.332 -57.893  72.713
+HETATM   19 N2    mG A   1     -43.168 -57.929  72.078
+HETATM   20 H21   mG A   1     -43.021 -57.991  71.081
+HETATM   21 H22   mG A   1     -42.339 -57.912  72.655
+HETATM   22 N3    mG A   1     -44.333 -57.837  74.032
+HETATM   23 C4    mG A   1     -45.580 -57.797  74.536
+HETATM   24 C3'   mG A   1     -45.187 -55.786  78.251
+HETATM   25 H3'   mG A   1     -45.746 -54.928  77.880
+HETATM   26 C2'   mG A   1     -44.332 -56.350  77.139
+HETATM   27 H2'1  mG A   1     -44.474 -55.539  76.424
+HETATM   28 O2'   mG A   1     -42.956 -56.413  77.521
+HETATM   29 CM2   mG A   1     -42.450 -56.573  76.721
+HETATM   30 HM'1  mG A   1     -41.525 -56.621  76.936
+HETATM   31 HM'2  mG A   1     -42.727 -57.393  76.330
+HETATM   32 HM'3  mG A   1     -42.595 -55.863  76.107
+END

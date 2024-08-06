@@ -1,0 +1,26 @@
+{
+    "duplex1": {
+        "name": "duplex1",
+        "basestrucct": "ogdup",
+        "initduplex": "duplex.pdb",
+        "seqsubst" :"substitute.txt",
+        "mgions": 44,
+        "bpcts": true,
+        "additcts":true,
+        "backbonects": true,
+        "repulsects" : false,
+        "namehpc":"d1"
+        },
+    "duplex2": {
+        "name": "duplex2",
+        "basestrucct": "ogdup",
+        "initduplex": "duplex.pdb",
+        "seqsubst" :"substitute.txt",
+        "mgions": 44,
+        "bpcts": true,
+        "additcts":true,
+        "backbonects": true,
+        "repulsects" : false,
+        "namehpc":"d2"
+        }
+}

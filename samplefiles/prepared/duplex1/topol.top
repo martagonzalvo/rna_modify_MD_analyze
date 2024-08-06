@@ -1,0 +1,53 @@
+;
+;	File 'topol.top' was generated
+;	By user: marta (502)
+;	On host: dhcp-21-184.caltech.edu
+;	At date: Tue Aug  6 02:45:49 2024
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                :-) GROMACS - gmx pdb2gmx, 2023.3-Homebrew (-:
+;	
+;	Executable:   /usr/local/bin/../Cellar/gromacs/2023.3/bin/gmx
+;	Data prefix:  /usr/local/bin/../Cellar/gromacs/2023.3
+;	Working dir:  /Users/marta/rna_MD_analysis/samplefiles/prepared/duplex1
+;	Command line:
+;	  gmx pdb2gmx -f substituted.pdb -o duplexgmxmer.pdb -water tip3p -ignh -ff amber14sblnaintorna -missing
+;	Force field was read from current directory or a relative path - path added.
+;
+
+; Include forcefield parameters
+#include "./amber14sblnaintorna.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_RNA_chain_A.itp"
+#include "topol_RNA_chain_B.itp"
+#include "topol_DNA_chain_C.itp"
+
+; Include water topology
+#include "./amber14sblnaintorna.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./amber14sblnaintorna.ff/ions.itp"
+
+[ system ]
+; Name
+Protein in water
+
+[ molecules ]
+; Compound        #mols
+RNA_chain_A         1
+RNA_chain_B         1
+DNA_chain_C         1
+SOL         46691
+NA               137
+CL               137
+CA               44
