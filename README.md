@@ -1,6 +1,6 @@
 Author: Marta Gonzalvo-Ulla, Caltech
 
-Scripts to build RNA structures with modified and unnatural residues (2'-O-methyl [2'OMe], locked nucleic acids [LNA], phosphorothioate [PS]), run molecular dynamics simulations, and analyze impact of different sequences on structure and stability
+Scripts to build RNA structures with modified and unnatural residues (2'-O-methyl [2'OMe], locked nucleic acids [LNA], phosphorothioate [PS]), run molecular dynamics simulations, and analyze the impact of different sequences on structure and stability.
 
 The sample siRNA is comprised of one long core strand, and two shorter sensor and guide strands that both base pair with core strand. They form 2 double helices. Image included below.
 
