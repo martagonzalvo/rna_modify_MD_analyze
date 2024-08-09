@@ -2,11 +2,11 @@ Author: Marta Gonzalvo-Ulla, Caltech
 
 Scripts to build RNA structures with modified and unnatural residues (2'-O-methyl [2'OMe], locked nucleic acids [LNA], phosphorothioate [PS]), run molecular dynamics simulations, and analyze the impact of different sequences on structure and stability.
 
-The sample siRNA is comprised of one long core strand, and two shorter sensor and guide strands that both base pair with core strand. They form 2 double helices. Image included below.
+The sample siRNA is comprised of one long core strand, and two shorter sensor and guide strands that both base pair with core strand, as reported by Han et. al (1). They form 2 double helices. Image included below. 
 
 Protocol:
 
-1. 2 A-form DNA double helices are created using PyMOL's* builder tool. Sample structures: helix1.pdb, helix2.pdb
+1. 2 A-form DNA double helices are created using PyMOL's (2) builder tool. Sample structures: helix1.pdb, helix2.pdb
 
 2. The two helices are manually joined in single file and pulled close together with the right alignment for merging them. The linker C3 is also added manually. Then, the chains are manually reordered in pdb to have each A,B,C chain sequentially. The RL residue 2 is then renamed to become part of the adjacent residue (-22). Intermediate structure: mergedstructures.pdb. Sample final structure: duplex.pdb
 
@@ -16,7 +16,7 @@ Protocol:
 
     3a) Substituting monomers in place with substnucl_wholefile.py (depends on functions in substnucl.py, needs file describing modifications+RNA residues, sample: substitute.txt, monomers in monomer_struct)
 
-    3b) Run solvation, adding ions using Gromacs**: Using modified force field for modified and non-standard residues***
+    3b) Run solvation, adding ions using Gromacs (3-10): Using modified force field for modified and non-standard residues (11-17)
 
     3c) Creating .mdp files with correct and desired constraints (depends on biashbond_rna.py, customized hard-coded file)
 
@@ -39,10 +39,10 @@ Protocol:
     --- Command: python visualiz_analysis.py samplefiles/results
 
 
-This github repository accompanies a publication in preparation.
+This github repository accompanies a publication in preparation, and the project has been funded by Switch Therapeutics (https://www.switchthera.com).
 
-Software used: pandas, MDTraj, MDAnalysis, Matplotlib****
+Software used: pandas, MDTraj, MDAnalysis, Matplotlib (18-23)
 
-\* , \** ,\*** , \****: All references can be found in references.txt file.
+(1-23): All references can be found in references.txt file.
 
 ![3-strand double helix construct image](https://github.com/martagu/rna_modify_MD_analyze/blob/main/samplefiles/md1pdb.png?raw=true)
