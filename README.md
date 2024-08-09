@@ -13,11 +13,11 @@ Protocol:
 
 3. The modifications are substituted into the structures and folders are created for each simulation with subst_prep.py based on parameters in json file. Sample json file: simulations.json. Sample final folder: foldersimulation.
 
-        This involves a few major steps:
+    This involves a few major steps:
 
-            - Substituting monomers in place with substnucl_wholefile.py (depends on functions in substnucl.py, needs file describing modifications+RNA residues, sample: substitute.txt, monomers in monomer_struct)
-            - Run solvation, adding ions using Gromacs**: Using modified force field for modified and non-standard residues***
-            - Creating .mdp files with correct and desired constraints (depends on biashbond_rna.py, customized hard-coded file)
+        - Substituting monomers in place with substnucl_wholefile.py (depends on functions in substnucl.py, needs file describing modifications+RNA residues, sample: substitute.txt, monomers in monomer_struct)
+        - Run solvation, adding ions using Gromacs**: Using modified force field for modified and non-standard residues***
+        - Creating .mdp files with correct and desired constraints (depends on biashbond_rna.py, customized hard-coded file)
 
     -- Command: python subst_prep.py samplefiles/simulations.json samplefiles (script is also hard-coded)
 
