@@ -40,6 +40,6 @@ This github repository accompanies a publication in preparation.
 
 Software used: pandas, MDTraj, MDAnalysis, Matplotlib****
 
-*,**,***,****: All references can be found in references.txt file.
+\* , \** ,\*** , \****: All references can be found in references.txt file.
 
 ![3-strand double helix construct image](https://github.com/martagu/rna_modify_MD_analyze/blob/main/samplefiles/md1pdb.png?raw=true)
