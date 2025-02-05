@@ -39,7 +39,7 @@ Protocol:
     --- Command: python visualiz_analysis.py samplefiles/results
 
 
-This github repository accompanies a publication in preparation, and the project has been funded by Switch Therapeutics (https://www.switchthera.com).
+This github repository is a work in progress and accompanies a publication in preparation. The project has been funded by Switch Therapeutics (https://www.switchthera.com).
 
 Software used: pandas, MDTraj, MDAnalysis, Matplotlib (18-23)
 
