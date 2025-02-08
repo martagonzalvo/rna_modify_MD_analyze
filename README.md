@@ -16,7 +16,7 @@ Protocol:
 
     3a) Substituting monomers in place with substnucl_wholefile.py (depends on functions in substnucl.py, needs file describing modifications+RNA residues, sample: substitute.txt, monomers in monomer_struct)
 
-    3b) Run solvation, adding ions using Gromacs (3-10): Using modified force field for modified and non-standard residues (11-17)
+    3b) Run solvation, adding ions using Gromacs (3-10): Using modified force field for modified and non-standard residues (11-17). Need to add modified residues to residuetypes.dat file in Gromacs library.
 
     3c) Creating .mdp files with correct and desired constraints (depends on biashbond_rna.py, customized hard-coded file)
 
