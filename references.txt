@@ -15,23 +15,34 @@ References:
 9. S. Páll, M.J. Abraham, C. Kutzner, B. Hess, and E. Lindahl, “Tackling exascale software challenges in molecular dynamics simulations with GROMACS”; pp. 3–27 in Solving software challenges for exascale. Edited by S. Markidis and E. Laure. Springer International Publishing Switzerland, London, 2015.
 10. M.J. Abraham, T. Murtola, R. Schulz, S. Páll, J.C. Smith, B. Hess, and E. Lindahl, “GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers,” SoftwareX, 1–2 19–25 (2015).
 
-(11-17) FF Description and References:
 
-The force field (FF) AMBER14SB was used (11). Parameters for the modified nucleotides were added to make a modified FF from the literature: 2'OMe (12), LNA (13) and PS (14). For the unreported LNA thymidine, the parameters were derived from (13) for the sugar ring and from AMBER03FF for the base (15). Its charges were calculated with the RESP ESP charge Derive (RED) server (16). The parameters for the C3 linker are from the GAFF FF (17). FF References:
+(11-20) FF construction description is in parameterization.txt. References:
 
-11. Maier, J. A. et al. ff14SB: improving the accuracy of protein side chain and backbone parameters from ff99SB. J. Chem. Theory Comput. 11, 3696–3713 (2015) 
-12. Aduri, R., Psciuk, B.T., Saro, P., Taniga, H., Schlegel, H.B., and SantaLucia, J. (2007). AMBER force field parameters for the naturally occurring modified nucleosides in RNA. J. Chem. Theor. Comput. 3, 1464–1475.
-13. Condon, D.E., Yildirim, I., Kennedy, S.D., Mort, B.C., Kierzek, R., and Turner, D.H. (2014). Optimization of an AMBER force field for the artificial nucleic acid, LNA, and benchmarking with NMR of L(CAAU). J. Phys. Chem. B 118, 1216–1228.
-14. Lind, K.E., Sherlin, L.D., Mohan, V., Griffey, R.H., and Ferguson, D.M. (1997). Parameterization and simulation of the physical properties of phosphorothioate nucleic acids. In Molecular Modeling of Nucleic Acids, 682 (American Chemical Society), pp. 41–54.
-15. Duan, Y., Wu, C., Chowdhury, S., Lee, M.C., Xiong, G., Zhang, W., Yang, R., Cieplak, P., Luo, R., Lee, T., et al. (2003). A point-charge force field for molecular mechanics simulations of proteins based on condensed-phase quantum mechanical calculations. J. Comput. Chem. 24, 1999–2012.
-16.(http://q4md- forcefieldtools.org/REDServer/).
-17. Wang, J., Wolf, R.M., Caldwell, J.W., Kollman, P.A., and Case, D.A. (2004). Development and testing of a general amber force field. J. Comput. Chem. 25, 1157–1174.
+ModXNA library https://modxna.chpc.utah.edu/about/:
+11. Love, O., Galindo-Murillo, R., Roe, D. R., Dans, P. D., Cheatham III, T. E., Bergonzo, C."modXNA: A Modular Approach to Parameterization of Modified Nucleic Acids for Use with Amber Force Fields". JCTC, 20,21 (2024). 
 
-(18-23) Citations software:
+REDS server https://upjv.q4md-forcefieldtools.org/REDServer-Development/:
+12. E. Vanquelef, S. Simon, G. Marquant, E. Garcia, G. Klimerak, J. C. Delepine, P. Cieplak & F.-Y. Dupradeau, R.E.D. Server: a web service for deriving RESP and ESP charges and building force field libraries for new molecules and molecular fragments, Nucl. Acids Res. (Web server issue) 2011, 39, W511-W517.
+13. F. Wang, J.-P. Becker, P. Cieplak & F.-Y. Dupradeau, R.E.D. Python: Object oriented programming for Amber force fields, Université de Picardie - Jules Verne, Sanford Burnham Prebys Medical Discovery Institute, Nov. 2013
+14. F.-Y. Dupradeau, A. Pigache, T. Zaffran, C. Savineau, R. Lelong, N. Grivel, D. Lelong, W. Rosanski & P. Cieplak, The R.E.D. tools: Advances in RESP and ESP charge derivation and force field library building, Phys. Chem. Chem. Phys. 2010, 12, 7821-7839, [DOI], [PMID], [PMCID].
+15. C. I. Bayly, P. Cieplak, W. Cornell & P. A. Kollman, A well-behaved electrostatic potential based method using charge restraints for deriving atomic charges: the RESP model, J. Phys. Chem., 1993, 97, 10269-10280.
+16. Gaussian 16, Revision B.01, M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, G. A. Petersson, H. Nakatsuji, X. Li, M. Caricato, A. V. Marenich, J. Bloino, B. G. Janesko, R. Gomperts, B. Mennucci, H. P. Hratchian, J. V. Ortiz, A. F. Izmaylov, J. L. Sonnenberg, D. Williams-Young, F. Ding, F. Lipparini, F. Egidi, J. Goings, B. Peng, A. Petrone, T. Henderson, D. Ranasinghe, V. G. Zakrzewski, J. Gao, N. Rega, G. Zheng, W. Liang, M. Hada, M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, Y. Honda, O. Kitao, H. Nakai, T. Vreven, K. Throssell, J. A. Montgomery, Jr., J. E. Peralta, F. Ogliaro, M. J. Bearpark, J. J. Heyd, E. N. Brothers, K. N. Kudin, V. N. Staroverov, T. A. Keith, R. Kobayashi, J. Normand, K. Raghavachari, A. P. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, M. Cossi, J. M. Millam, M. Klene, C. Adamo, R. Cammi, J. W. Ochterski, R. L. Martin, K. Morokuma, O. Farkas, J. B. Foresman, and D. J. Fox, Gaussian, Inc., Wallingford CT, 2016.
 
-18. The pandas development team. pandas-dev/pandas: Pandas (2020) Zenodo, https://doi.org/10.5281/zenodo.3509134
-19. McKinney, W. Data Structures for Statistical Computing in Python, Proceedings of the 9th Python in Science Conference (2010), 56-61
-20. McGibbon, R. T., Beauchamp, K. A., Harrigan, M. P., Klein, C., Swails, J. M., Hernández, C. X., Schwantes, C. R., Wang, L.-P., Lane, T. J., and Pande, V. S. (2015). MDTraj: A Modern Open Library for the Analysis of Molecular Dynamics Trajectories. Biophysical Journal. 109, 8, 1528-1532.
-21. R. J. Gowers, M. Linke, J. Barnoud, T. J. E. Reddy, M. N. Melo, S. L. Seyler, D. L. Dotson, J. Domanski, S. Buchoux, I. M. Kenney, and O. Beckstein. MDAnalysis: A Python package for the rapid analysis of molecular dynamics simulations. In S. Benthall and S. Rostrup, editors, Proceedings of the 15th Python in Science Conference, pages 98-105, Austin, TX, 2016. SciPy, doi:10.25080/majora-629e541a-00e.
-22. N. Michaud-Agrawal, E. J. Denning, T. B. Woolf, and O. Beckstein. MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations. J. Comput. Chem. 32 (2011), 2319-2327, doi:10.1002/jcc.21787. PMCID:PMC3144279
-23. J. D. Hunter, "Matplotlib: A 2D Graphics Environment", Computing in Science & Engineering, vol. 9, no. 3, pp. 90-95, 2007.
+CPPTRAJ:
+17. Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem. Theory Comput., 2013, 9 (7), pp 3084-3095.
+
+AmberTools24: 
+18. D.A. Case, H.M. Aktulga, K. Belfon, D.S. Cerutti, G.A. Cisneros, V.W.D. Cruz eiro, N. Forouzesh, T.J. Giese, A.W. Götz, H. Gohlke, S. Izadi, K. Kasavajhala, M.C. Kaymak, E. King, T. Kurtzman, T.-S. Lee, P. Li, J. Liu, T. Luchko, R. Luo, M. Manathunga, M.R. Machado, H.M. Nguyen, K.A. O’Hearn, A.V. Onufriev, F. Pan, S. Pantano, R. Qi, A. Rahnamoun, A. Risheh, S. Schott-Verdugo, A. Shajan, J. Swails, J. Wang, H. Wei, X. Wu, Y. Wu, S. Zhang, S. Zhao, Q. Zhu, T.E. Cheatham III, D.R. Roe, A. Roitberg, C. Simmerling, D.M. York, M.C. Nagan*, and K.M. Merz Jr.* AmberTools. J. Chem. Inf. Model. 63, 6183-6191 (2023).
+
+Amber14SB force field (FF):
+19. J.A. Maier, C. Martinez, K. Kasavajhala, L. Wickstrom, K.E. Hauser and C. Simmerling.  "ff14SB: Improving the accuracy of protein side chain and backbone parameters from ff99SB." J. Chem. Theory Comput. 11, 3696-3713. (2015)
+
+
+(20-25) Citations software:
+
+20. The pandas development team. pandas-dev/pandas: Pandas (2020) Zenodo, https://doi.org/10.5281/zenodo.3509134
+21. McKinney, W. Data Structures for Statistical Computing in Python, Proceedings of the 9th Python in Science Conference (2010), 56-61
+22. McGibbon, R. T., Beauchamp, K. A., Harrigan, M. P., Klein, C., Swails, J. M., Hernández, C. X., Schwantes, C. R., Wang, L.-P., Lane, T. J., and Pande, V. S. (2015). MDTraj: A Modern Open Library for the Analysis of Molecular Dynamics Trajectories. Biophysical Journal. 109, 8, 1528-1532.
+23. R. J. Gowers, M. Linke, J. Barnoud, T. J. E. Reddy, M. N. Melo, S. L. Seyler, D. L. Dotson, J. Domanski, S. Buchoux, I. M. Kenney, and O. Beckstein. MDAnalysis: A Python package for the rapid analysis of molecular dynamics simulations. In S. Benthall and S. Rostrup, editors, Proceedings of the 15th Python in Science Conference, pages 98-105, Austin, TX, 2016. SciPy, doi:10.25080/majora-629e541a-00e.
+24. N. Michaud-Agrawal, E. J. Denning, T. B. Woolf, and O. Beckstein. MDAnalysis: A Toolkit for the Analysis of Molecular Dynamics Simulations. J. Comput. Chem. 32 (2011), 2319-2327, doi:10.1002/jcc.21787. PMCID:PMC3144279
+25. J. D. Hunter, "Matplotlib: A 2D Graphics Environment", Computing in Science & Engineering, vol. 9, no. 3, pp. 90-95, 2007.

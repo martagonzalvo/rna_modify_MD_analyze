@@ -1,6 +1,6 @@
 Author: Marta Gonzalvo-Ulla, Caltech
 
-Scripts to build RNA structures with modified and unnatural residues (2'-O-methyl [2'OMe], locked nucleic acids [LNA], phosphorothioate [PS]), run molecular dynamics simulations, and analyze the impact of different sequences on structure and stability.
+Scripts to build RNA structures with modified and unnatural residues (2'-O-methyl, locked nucleic acids, 2’-fluororibose, 2’-O-methoxyethyl, 5’-methylcytosine, phosphorothioate), run molecular dynamics simulations, and analyze the impact of different sequences on structure and stability.
 
 The sample siRNA is comprised of one long core strand, and two shorter sensor and guide strands that both base pair with core strand, as reported by Han et. al (1). They form 2 double helices. Image included below. 
 
@@ -16,9 +16,11 @@ Protocol:
 
     3a) Substituting monomers in place with substnucl_wholefile.py (depends on functions in substnucl.py, needs file describing modifications+RNA residues, sample: substitute.txt, monomers in monomer_struct)
 
-    3b) Run solvation, adding ions using Gromacs (3-10): Using modified force field for modified and non-standard residues (11-17). Need to add modified residues to residuetypes.dat file in Gromacs library.
+    3b) Parameterize, create topol.top and other .itp files using monomers from modXNA library and custom fragments parameterized with REDS using parameterize_gmx_modxna.py (hardcoded for monomers in this work). A detailed note on parameterization is included in parameterization.txt (11-19).
 
-    3c) Creating .mdp files with correct and desired constraints (depends on biashbond_rna.py, customized hard-coded file)
+    3c) Create box, run solvation, add ions using Gromacs (3-10).
+
+    3d) Creating .mdp files with correct and desired constraints using biashbond_rna.py, (customized hard-coded file)
 
     -- Command: python subst_prep.py samplefiles/simulations.json samplefiles (script is also hard-coded)
 
@@ -39,10 +41,10 @@ Protocol:
     --- Command: python visualiz_analysis.py samplefiles/results
 
 
-This github repository is a work in progress and accompanies a publication in preparation. The project has been funded by Switch Therapeutics (https://www.switchthera.com).
+This github repository is a work in progress and accompanies a publication in preparation. No  The project has been funded by Switch Therapeutics (https://www.switchthera.com).
 
-Software used: pandas, MDTraj, MDAnalysis, Matplotlib (18-23)
+Software used: pandas, MDTraj, MDAnalysis, Matplotlib (21-25)
 
-(1-23): All references can be found in references.txt file.
+(1-25): All references can be found in references.txt file.
 
-![3-strand double helix construct image](https://github.com/martagu/rna_modify_MD_analyze/blob/main/samplefiles/md1pdb.png?raw=true)
+![3-strand double helix construct image](https://github.com/martagu/rna_modify_MD_analyze/blob/main/samplefiles/md1pdb.png?raw=true) XXXX REDO WITH CORRECT T2/T1 STRUCTURE

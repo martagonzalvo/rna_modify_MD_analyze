@@ -32,8 +32,7 @@ else:
 def prepare_gmx(cwd, mgions):
     '''Run all steps before equilibration in gromacs: solvation, add ions'''
     # prep file gromacs
-    subprocess.call('''gmx pdb2gmx -f substituted.pdb -o duplexgmxmer.pdb -water tip3p -ignh -ff amber14sblnaintorna -missing
-    gmx editconf -f duplexgmxmer.pdb -o dup_boxmer.pdb -c -d 1 -bt cubic 
+    subprocess.call('''gmx editconf -f ambersubstituted.pdb -o dup_boxmer.pdb -c -d 1 -bt cubic 
     gmx solvate -cp dup_boxmer.pdb -o dup_solvmer.gro -p topol.top 
     gmx grompp -f ions.mdp -c dup_solvmer.gro -p topol.top -o ions.tpr -maxwarn 2''', cwd=cwd, shell=True)
 
@@ -99,12 +98,15 @@ for sim in datasimulat:
     os.mkdir(cwd)
 
 
-    subprocess.call('''cp -r ~/rna_md_analysis/samplefiles/amber14sblnaintorna.ff .
+    subprocess.call('''cp -r ~/rna_md_analysis/samplefiles/amber14sb.ff .
     cp ~/rna_md_analysis/samplefiles/*mdp .
     cp ~/rna_md_analysis/samplefiles/*sh .''', cwd=cwd, shell=True)
 
-    # Substituting unnat residues into pymol duplex
+    # Substituting unnatural residues into pymol duplex
     subprocess.call('''python ~/rna_md_analysis/substnucl_wholefile.py ~/rna_md_analysis/{}/{} ~/rna_md_analysis/{}/{} ~/rna_md_analysis/{}/monomer_struct substituted.pdb'''.format(folderfiles,initduplex, folderfiles,seqsubst,folderfiles), cwd=cwd, shell=True)
+
+    # Parameterizing using modXNA library, splitting topology into itp files, making actual topology using amber14sb
+    subprocess.call('''python ~/parameterize_gmx_modxna.py substituted.pdb''', cwd=cwd, shell=True)
 
 
     # preparing gmx
