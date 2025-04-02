@@ -21,28 +21,35 @@ Protocol:
     3c) Create box, run solvation, add ions using Gromacs (3-10).
 
     3d) If custom constraints are desired, .mdp files with constraints are created using biashbond_rna.py. (customized hard-coded file)
-
-    -- Command: python subst_prep.py samplefiles/simulations.json samplefiles (script is also hard-coded)
+    ```
+    python subst_prep.py samplefiles/simulations.json samplefiles 
+    ```
+    (script is also hard-coded)
 
 4. Equilibration and production molecular dynamics are run using Gromacs. Sample script: runsimulation.sh. 
 
-    - Will generate xtc, other standard gromacs files. Then a pdb trajectory of non-water atoms is generated for analysis from the .xtc with a command similar to: 
-        gmx trjconv -f md.xtc -s md.gro -o md.pdb -pbc nojump
-        Sample pdb: md.pdb
+    - Will generate xtc, other standard gromacs files. Then a pdb trajectory of non-water atoms is generated for analysis from the .xtc with a command similar to the one below. Sample pdb: md.pdb 
+    ```
+    gmx trjconv -f md.xtc -s md.gro -o md.pdb -pbc nojump
+    ```
+        
 
 5. Results are analyzed from trajectory pdbs:
 
     5a) First, a csv is generated with the values of structural measures of interest at every timestep in the output pdbs using analysis.py. Outputs certain coordinates, distances and angles, hardcoded into the file. Sample output: summary_result1.csv
-
-    --- Command: python analysis.py samplefiles/results samplefiles/templatefolder
+    ```
+    python analysis.py samplefiles/results samplefiles/templatefolder
+    ```
 
     5b) The csv results are visualized for one or more simulations using visualiz_analysis.py. Types of files is hardcoded. Sample plot 5 simulations: rmsd5simulations.png
-
-    --- Command: python visualiz_analysis.py samplefiles/results
+    ```
+    python visualiz_analysis.py samplefiles/results
+    ```
 
     5c) The helical parameters of the complexes are analyzed using the DSSR program (21-23), using dssr_folder.py. 
-
-    --- Command: python dssrx3dna_folder.py folder dssrdirectory
+    ```
+    python dssrx3dna_folder.py folder dssrdirectory
+    ```
 
 
 This github repository is a work in progress and accompanies a publication in preparation. The project has been funded by Switch Therapeutics (https://www.switchthera.com).
