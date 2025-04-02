@@ -51,4 +51,4 @@ Analysis software used: pandas, MDTraj, MDAnalysis, Matplotlib, Seaborn (24-30)
 
 (1-30): All references can be found in references.txt file.
 
-![3-strand double helix construct image](https://github.com/martagu/rna_modify_MD_analyze/blob/main/samplefiles/md1pdb.png?raw=true) XXXX REDO WITH CORRECT T2/T1 STRUCTURE
+![3-strand double helix construct image](https://github.com/martagonzalvo/rna_modify_MD_analyze/blob/main/samplefiles/rnamodified.png?raw=true)
