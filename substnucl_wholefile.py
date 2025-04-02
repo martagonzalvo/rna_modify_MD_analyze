@@ -8,10 +8,10 @@
 #     separated by single spaces!
 #     N, e.g. 3 is number of nucleotide in template where modified structure will be placed into
 #     C, e.g. A is chain where found
-#     modX, e.g. lC is name of modified nucleotide
+#     modX, e.g. LC is name of modified nucleotide
 #       Example:
-#           3 A lC
-#           7 C mU
+#           3 A LC
+#           7 C MU
 #           NO SPACES AT THE END of to_subst.txt!
 #   - monomerstructfolder is folder with pdb structures of monomers to substitute in
 #   - nameoutput.pdb is desired final name
@@ -48,6 +48,7 @@ print('starting, takes about 1-2 mins for ~96 residues')
 
 for line in modify_positions:
     data = line.split('\n')[0]
+    data = data.strip()
     position, chain, monomer =  data.split(' ')
     thiophosphate = False
 
@@ -84,6 +85,7 @@ os.rename(intermoutput+'.pdb', nameoutput)
 
 print('Substituted all monomers defined in {} into {}, output is file {}'.format(mono_file, template, nameoutput))
 print("Couldn't do these substitutions: {}".format(erred))
+print("If anything erred, check format of pdbs: have chain info, spacing, etc. Monomers should be 3 letters max including S, except 3' terminals")
 
 
 

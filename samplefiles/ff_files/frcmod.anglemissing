@@ -1,0 +1,13 @@
+based on optimization of terminal L3P and E3P
+MASS
+CI 12.010
+CT 12.010
+HC 1.0080
+
+ANGLE
+CI-CT-HC	46.4	109.769	     
+
+NONBON
+CI          1.9080  0.1094             same as c3
+CT          1.9080  0.1094             same as c3
+HC          1.4870  0.0157             same as hc

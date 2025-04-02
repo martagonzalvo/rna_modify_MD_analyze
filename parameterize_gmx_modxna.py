@@ -4,7 +4,7 @@
 
 # python parameterize_gmx_modxna.py substituted
 
-    # substituted is namefile
+    # substituted is name of file with unnatural residues 
 
 
 
@@ -17,13 +17,17 @@ path =  os.getcwd()
 namefile = sys.argv[1].split('.')[0]
 
 
-subprocess.call('''cp ~/*.lib  .''', cwd=path, shell=True)
-subprocess.call('''cp -r ~/dat  .''', cwd=path, shell=True)
+subprocess.call('''cp ~/ff_files/*.lib  .''', cwd=path, shell=True)
+subprocess.call('''cp -r ~/ff_files/dat  .''', cwd=path, shell=True)
+subprocess.call('''cp ~/ff_files/frcmod*  .''', cwd=path, shell=True)
+
+subprocess.call('''cp -r ~/ff_files/residuetypes.dat  .''', cwd=path, shell=True)
 
 
 tleapfile = '''loadamberparams dat/frcmod.modxna
 source leaprc.DNA.OL15
 source leaprc.water.tip3p
+loadamberparams frcmod.anglemissing
 loadoff LG.lib
 loadoff LC.lib
 loadoff LT.lib
@@ -52,6 +56,19 @@ loadoff MCS.lib
 loadoff NGS.lib
 loadoff MUS.lib
 loadoff FUS.lib
+loadoff C3.lib
+loadoff E3P.lib
+loadoff L3P.lib
+loadoff MC5.lib
+loadoff LH5.lib
+loadoff NG5.lib
+loadoff EG5.lib
+loadoff LG5.lib
+loadoff ET3.lib
+loadoff LT3.lib
+loadoff NG3.lib
+loadoff MA3.lib
+loadoff H5S.lib
 
 {name} = loadpdb {name}.pdb
 

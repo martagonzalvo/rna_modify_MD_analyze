@@ -5,16 +5,20 @@ To parameterize the modified siRNA structures in this work, the following approa
 2. Create custom fragments not in ModXNA library with REDS (12-16):
 
     2a.) Create pdb of fragment with capping group if needed.
-    2b.) If fragment has charge: include Project.config with "MOLECULE1-TOTCHARGE    = -1"
-    2c.) Compress folder with pdb and Project.config if needed, and submit to REDS server. Using Gaussian 16.
-    2d.) Download results. Use CPPTRAJ (17, 18) to remove capping group and redistribute charge. Sample CPPTRAJ steps:
+    2b.) For terminal nucleotides, submit pdb with 5' and 3' oxygens as -O-H and define 2 atom groups involved in phosphodiester backbone Project.config (no need to specify charges unless modification has charge). Example: "MOLECULE1-FRGNT       = 1 2 | 40 41"
+    2c.) If fragment has charge: include Project.config with "MOLECULE1-TOTCHARGE    = -1"
+    2d.) Compress folder with pdb and Project.config if needed, and submit to REDS server. Using Gaussian 16.
+    2e.) Download results. For terminal residues:
+       - For 5', No need change atom names or remove capping groups (cpptraj), just save .lib and pdb. 
+       - For 3': If doing phosphorothioate, need substitute atoms, adjust charge and fix 3' connectivity in .lib nit.connect field.
+    2f.) Use CPPTRAJ (17, 18) to remove capping group and redistribute charge. Sample CPPTRAJ steps:
         parm Mol-sm_m1-c1.mol2
         trajin Mol-sm_m1-c1.mol2
         strip @C24,H241,H242,H243 charge -1 
         trajout out.mol2 mol2
         run
         exit
-    2e.) Use out.mol2 from previous step to generate fragment.lib using tleap (18). Sample tleap steps: 
+    2g.) Use out.mol2 from previous step to generate fragment.lib using tleap (18). Sample tleap steps: 
         mol = loadmol2 out.mol2 
         saveoff mol out.lib
         quit

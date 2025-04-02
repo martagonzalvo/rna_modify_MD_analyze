@@ -33,7 +33,7 @@ import sys, subprocess, os
 
 # structure as reference
 struct = sys.argv[1]
-# mdp file to add constraints: em, nvt, annealing etc
+# mdp file to add constraints: em, nvt, etc
 mdpfile = sys.argv[2]
 # create and modify index file with atom indeces
 modindex = True
@@ -62,8 +62,7 @@ if sys.argv[8] =='True':
 
 structuretypes=[
 'ogdup',
-'long2dup',
-'long6dup',]
+]
 
 
 if structype not in structuretypes:
@@ -77,13 +76,11 @@ if structype not in structuretypes:
 '''.format(structuretypes))
     exit(0)
 
-# -1 bc rest are 1-indexed, but I already accounted for that
-
 
 additcts_list = []
 repulsivects_list = []
 
-
+# -1 bc rest are 1-indexed, but I already accounted for that
 if structype == 'ogdup':
     strands = [
         ['A', np.arange(1,27)],
@@ -279,9 +276,9 @@ def get_index_pairs(hbond_pairs, topo):
 
             if 'A' in resname:
                 bases = bases+'A'
-            elif 'U' in resname or 'T' in resname:
+            elif 'U' in resname or 'T' in resname or 'P' in resname:
                 bases = bases+'U'
-            elif 'C' in resname:
+            elif 'C' in resname or 'H' in resname:
                 bases = bases+'C'
             elif 'G' in resname:
                 bases = bases+'G'

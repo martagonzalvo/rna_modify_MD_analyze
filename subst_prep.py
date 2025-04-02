@@ -29,7 +29,7 @@ else:
 
 
 
-def prepare_gmx(cwd, mgions):
+def prepare_gmx(cwd, mgions, naions):
     '''Run all steps before equilibration in gromacs: solvation, add ions'''
     # prep file gromacs
     subprocess.call('''gmx editconf -f ambersubstituted.pdb -o dup_boxmer.pdb -c -d 1 -bt cubic 
@@ -41,22 +41,15 @@ def prepare_gmx(cwd, mgions):
     3
     EOF'''.format(mgions), cwd=cwd, shell=True)
 
-    if mgions%2 == 0:
-        na=0
-        SOLlast = 4
-    else:
-        na=1
-        SOLlast = 5
-
     subprocess.call('''gmx grompp -f ions.mdp -c dup_ca.gro -p topol.top -o ions.tpr -maxwarn 2
     gmx genion -s ions.tpr -o dup_na.gro -p topol.top -pname NA -np {} << EOF  
-    {}
-    EOF'''.format(na, SOLlast-1), cwd=cwd, shell=True)
+    2
+    EOF'''.format(naions), cwd=cwd, shell=True)
 
     subprocess.call('''gmx grompp -f ions.mdp -c dup_na.gro -p topol.top -o ions.tpr -maxwarn 2
     gmx genion -s ions.tpr -o dup_ions.gro -p topol.top -pname NA -nname CL -conc 0.154 << EOF
-    {}
-    EOF'''.format(SOLlast), cwd=cwd, shell=True)
+    2
+    EOF''', cwd=cwd, shell=True)
 
     subprocess.call("rm -rf \#*", cwd=cwd, shell=True)
 
@@ -69,10 +62,10 @@ def makectmdp(cwd, basestrucct, bpcts, additcts, backbonects, repulsects):
     subprocess.call('''gmx editconf -f dup_ions.gro -o dup_ions.pdb''', cwd=cwd, shell=True)
 
     # ADDING CONSTRAINTS
-    # only em change index
+    # only during em change index: "yes" keyword
     subprocess.call('''python ~/rna_md_analysis/biashbond_rna.py duplexgmxmer.pdb em.mdp yes {} {} {} {} {}'''.format(basestrucct, bpcts, additcts, backbonects, repulsects), cwd=cwd, shell=True)
 
-    # rest don't change index
+    # rest don't change index: "no" keyword
 
     for file in filesupdate:
         subprocess.call('''python ~/rna_md_analysis/biashbond_rna.py duplexgmxmer.pdb {}.mdp no {} {} {} {} {}'''.format(file, basestrucct, bpcts, additcts, backbonects, repulsects), cwd=cwd, shell=True)
@@ -85,6 +78,7 @@ for sim in datasimulat:
     basestrucct = datasimulat[sim]['basestrucct']
     initduplex = datasimulat[sim]['initduplex']
     mgions = datasimulat[sim]['mgions']
+    naions = datasimulat[sim]['naions']
     seqsubst = datasimulat[sim]['seqsubst']
     bpcts = datasimulat[sim]['bpcts']
     additcts = datasimulat[sim]['additcts']
@@ -108,9 +102,8 @@ for sim in datasimulat:
     # Parameterizing using modXNA library, splitting topology into itp files, making actual topology using amber14sb
     subprocess.call('''python ~/parameterize_gmx_modxna.py substituted.pdb''', cwd=cwd, shell=True)
 
-
     # preparing gmx
-    prepare_gmx(cwd, mgions)
+    prepare_gmx(cwd, mgions, naions)
 
     # make add constants to mdp files
     makectmdp(cwd, basestrucct, bpcts, additcts, backbonects, repulsects)

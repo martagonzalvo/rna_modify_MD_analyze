@@ -78,9 +78,16 @@ dict_rna = {
     'mU':'MU', 
     'mG':'NG',  ### NG BECAUSE MG is magnesium
     'mC':'MC',
+    'lmeC':'L5MC',
+    'moemeC':'MOE5MC',
+    'moeA':'MOEA',
+    'moeT':'MOET',
+    'moeC':'MOEC',
+    'moeG':'MOEG',
 }
+
 def rename_res_rna(res):
-    '''Renames residue from name file to names in dictionary'''
+    '''Renames residue from name file to names in dictionary if needed'''
     if res in dict_rna:
         return dict_rna[res]
     else:
@@ -181,17 +188,21 @@ def align_subst_single(basestruc, monostruc, atoms_align, ind_temp, chain, keep,
 
     if thiophosphate:
         if thiophosphate =='right':
-            srow = keeprows.loc[keeprows['attype']=='O1P']
-            oprow = keeprows.loc[keeprows['attype']=='O2P']
+            srow = keeprows.loc[keeprows['attype']=='OP2']
+            oprow = keeprows.loc[keeprows['attype']=='OP1']
             opind = oprow.index.tolist()[0]
-            keeprows.loc[opind, 'attype'] = 'O1P'
+            keeprows.loc[opind, 'attype'] = 'OP2'
             
         else:
-            srow = keeprows.loc[keeprows['attype']=='O2P']
+            srow = keeprows.loc[keeprows['attype']=='OP1']
+
         sind= srow.index.tolist()[0]
         keeprows.loc[sind, 'attype'] = 'S'
         keeprows.loc[sind, 'elem'] = 'S'
-        monof.loc[:, 'res'] = monof['res'].unique()[0]+'S'
+        if '3' not in monof['res'].unique()[0]:
+            monof.loc[:, 'res'] = monof['res'].unique()[0]+'S'
+        else: 
+            monof.loc[:, 'res'] = monof['res'].unique()[0]
         keeprows.loc[:, 'res'] = monof['res'].unique()[0]
 
 #   from phosphate 2ble struct merger

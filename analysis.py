@@ -13,6 +13,7 @@
 import pandas as pd
 import mdtraj as md
 import numpy as np
+from sklearn.decomposition import PCA
 import sys, os, time
 
 start = time.time()
@@ -23,8 +24,9 @@ typesfiles = [
 folder = sys.argv[1]
 templatefolder = sys.argv[2]
 
-def plot_save_coord(posit_name, listnames, full_traj, indeces,  summary_df, nth=1):
-    ''''Same as posit but saving coords, not doing linalg'''
+def calc_coord(posit_name, listnames, full_traj, indeces,  summary_df, nth=1):
+    ''''same as posit but saving coords, not doing linalg
+    '''
     traj = md.Trajectory.atom_slice(full_traj,indeces).xyz
 
     for i, data  in enumerate(zip(traj[::nth],listnames[::nth])):
@@ -38,7 +40,7 @@ def plot_save_coord(posit_name, listnames, full_traj, indeces,  summary_df, nth=
     return summary_df
 
 
-def plot_save_dist(distname, listnames, traj, indexg1, indexg2, summary_df, nth=1):
+def calc_dist(distname, listnames, traj, indexg1, indexg2, summary_df, nth=1):
     group1_traj = md.Trajectory.atom_slice(traj,indexg1).xyz
     group2_traj = md.Trajectory.atom_slice(traj,indexg2).xyz
     
@@ -49,39 +51,57 @@ def plot_save_dist(distname, listnames, traj, indexg1, indexg2, summary_df, nth=
     else:
         for i, data  in enumerate(zip(group1_traj[::nth], group2_traj[::nth],listnames[::nth])):
                 group1, group2, name = data
-                if 'noallos' not in name: 
-                    distval = np.linalg.norm(np.mean(group1, axis=0)-np.mean(group2, axis=0))
-                    summary_df.loc[summary_df.name==name, '{}'.format(distname)] = distval
+
+                distval = np.linalg.norm(np.mean(group1, axis=0)-np.mean(group2, axis=0))
+                summary_df.loc[summary_df.name==name, '{}'.format(distname)] = distval
     
     return summary_df
 
-def calc_angle(posit1, posit2, posit3):
-    if posit3 is not None:
-        vect1 = np.mean(posit1, axis=0)-np.mean(posit2, axis=0)
-        vect2 = np.mean(posit2, axis=0)-np.mean(posit3, axis=0)
+def calc_vector_pca(posit):
+    if len(posit)==1:
+        vector = posit[0]
+    elif len(posit)==2:
+        vector = posit[1]-posit[0]
     else:
-        vect1 = np.mean(posit1, axis=0)
-        vect2 = np.mean(posit2, axis=0)
-    unitv1 = vect1 / np.linalg.norm(vect1)
-    unitv2 = vect2 / np.linalg.norm(vect2)
-    angle =  np.arccos(np.clip(np.dot(unitv1, unitv2), -1.0, 1.0))
+        pca = PCA(n_components=3)
+        pca.fit(posit)
+        vector=pca.singular_values_
+    return vector
+
+def angle(posit1, posit2, posit3):
+
+    vector1 = calc_vector_pca(posit1)
+    vector2 = calc_vector_pca(posit2)
+
+    if posit3 is not None: ### CHECK THIS WORKS
+        vector3 = calc_vector_pca(posit3)  
+
+        vector1 = np.mean(vector1, axis=0)-np.mean(vector2, axis=0)
+        vector2 = np.mean(vector3, axis=0)-np.mean(vector2, axis=0)
+
+    unitv1 = vector1 / np.linalg.norm(vector1)
+    unitv2 = vector2 / np.linalg.norm(vector2)
+    angle =  np.degrees(np.arccos(np.clip(np.dot(unitv1, unitv2), -1.0, 1.0)))
+
     return angle
 
-def plot_save_angle(angle_name, listnames, traj, indexg1, indexg2, indexg3, summary_df, nth=1):
+def calc_angle(angle_name, listnames, traj, indexg1, indexg2, indexg3, summary_df, nth=1):
 
     group1_traj = md.Trajectory.atom_slice(traj,indexg1).xyz
     group2_traj = md.Trajectory.atom_slice(traj,indexg2).xyz
+    coord1 = group1_traj - np.mean(group1_traj,axis=0)
+    coord2 = group2_traj - np.mean(group2_traj,axis=0)
 
     if  indexg3 is not None: 
         group3_traj = md.Trajectory.atom_slice(traj,indexg3).xyz
+        coord3 = group3_traj - np.mean(group3_traj,axis=0)
     else:
-        group3_traj = [None]*len(group2_traj)
+        coord3 = [None]*len(group2_traj)    
     
-    for i, data  in enumerate(zip(group1_traj[::nth], group2_traj[::nth], group3_traj[::nth],listnames[::nth])):
-        group1, group2, group3, name = data
-        if 'noallos' not in name: 
-            angleval=calc_angle(group1, group2, group3)
-            summary_df.loc[summary_df.name==name, '{}'.format(angle_name)] = angleval
+    for i, data  in enumerate(zip(coord1[::nth], coord2[::nth], coord3[::nth],listnames[::nth])):
+        coord1, coord2, coord3, name = data
+        angleval = angle(coord1, coord2, coord3)
+        summary_df.loc[summary_df.name==name, '{}'.format(angle_name)] = angleval
     return summary_df
 
 
@@ -123,9 +143,6 @@ for trajpdb in os.listdir(path):
             ind_b_12 = topo[(topo['name']=="C3'") & (topo['resSeq'] == 12) & (topo['chainID']==1)].index
             ind_b_11 = topo[(topo['name']=="C3'") & (topo['resSeq'] == 11) & (topo['chainID']==1)].index
 
-            index_ca = topo[topo['name']=='CA'].index 
-            index_phosphates = topo[topo['name']=='P'].index
-
             ind_allnucleic = topo[(topo['chainID']==0) | (topo['chainID']==1) | (topo['chainID']==2)].index
             ind_helixlong = topo[((topo['chainID']==0)& (topo['resSeq'] < 22)) | ((topo['chainID']==1)& (topo['resSeq'] < 22)& (topo['resSeq'] > 1))].index
             ind_helixshort = topo[((topo['chainID']==1)& (topo['resSeq'] < 0)) | ((topo['chainID']==2))].index 
@@ -156,11 +173,11 @@ for trajpdb in os.listdir(path):
 
             for i, data in enumerate(list_distances): 
                 distname, indexg1, indexg2 = data
-                summary_df = plot_save_dist(distname, listnames, traj, indexg1, indexg2, summary_df, nth=1)
+                summary_df = calc_dist(distname, listnames, traj, indexg1, indexg2, summary_df, nth=1)
 
             for i, data in enumerate(list_angles):
                 positname, indexg1, indexg2, indexg3 = data
-                summary_df = plot_save_angle(positname, listnames, traj, indexg1, indexg2, indexg3,  summary_df, nth=1)
+                summary_df = calc_angle(positname, listnames, traj, indexg1, indexg2, indexg3,  summary_df, nth=1)
 
 
             summary_df['rmsd'] = md.rmsd(traj, traj, frame=0, atom_indices=ind_allnucleic)

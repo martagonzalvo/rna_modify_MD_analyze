@@ -26,13 +26,13 @@ monomers = [ ["DPO LNA RAA", "LA"], # L is locked nucleic acid
 ["DPO AF2 RUU", "FU"],
 ["PS1 MOE RAA", "EA"],
 ["PS1 MOE RCC", "EC"],
-["PS1 MOE RGG", "EG"],# E is  2’-O-methoxyethyl ribose
+["PS1 MOE RGG", "EG"], # E is  2’-O-methoxyethyl ribose
 ["PS1 MOE DTT", "ET"],
 ["PS1 MOE M5C", "EH"],
 ]
 
 
-atomstodel = ["P", "OP1", "OP2", "O5'", "O3'", "S1"]
+atomstodel = ["P", "OP1", "OP2", "S1"]
 
 cwd = os.getcwd()
 
@@ -69,6 +69,6 @@ for data in monomers:
         f.writelines(newlines)
 
 
-print('Done in this many minutes, 28 unique residues ',str((time.time()-start)/60))
+print('Done in this many minutes, 18 unique residues ',str((time.time()-start)/60))
 
 
