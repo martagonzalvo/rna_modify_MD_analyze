@@ -159,7 +159,7 @@
  "R" 1 "A" 34
  "R" 1 "A" 35
 !entry.NG5.unit.name single str
- "D-N_2"
+ "NG5"
 !entry.NG5.unit.positions table  dbl x  dbl y  dbl z
  0.0 0.0 0.0
  2.714864 -0.772730 3.325223
