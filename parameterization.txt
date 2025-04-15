@@ -24,3 +24,17 @@ To parameterize the modified siRNA structures in this work, the following approa
         quit
 
 3. Parameterize pdb of interest with modified fragments, using Amber14SB (19): DNA OL15, water TIP3P, modXNA and the generated .lib parameters, using tleap. Also geneate topol.top file. Sample script:  parameterize_gmx_modxna.py
+
+
+Shorthand notation for non-standard monomers and FF parameters, where X is base (A,U,T,C,G) and Y is any modification:
+
+- C3L: -(CH2-CH2-CH2)- linker
+- FX: 2'-Fluoro
+- LX: Locked nucleic acid
+- MX: 2'-O-Methyl
+- NG: 2'-O-Methyl guanosine, to distinguish residue name from MG ion
+- YH: 5-Methylcytosine
+- L3P: Locked thymine with C16 chain 3' capping group
+- H5S: Locked 5-Methylcytosine with triethylene glycol 5' capping group
+- YXS: Phosphorothioate backbone
+- YX3/YX5: 5' or 3' terminus
