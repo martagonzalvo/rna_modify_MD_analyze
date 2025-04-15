@@ -24,11 +24,12 @@ monomers = [ ["DPO LNA RAA", "LA"], # L is locked nucleic acid
 ["DPO AF2 RCC", "FC"],
 ["DPO AF2 RGG", "FG"],
 ["DPO AF2 RUU", "FU"],
-["PS1 MOE RAA", "EA"],
-["PS1 MOE RCC", "EC"],
-["PS1 MOE RGG", "EG"], # E is  2’-O-methoxyethyl ribose
-["PS1 MOE DTT", "ET"],
-["PS1 MOE M5C", "EH"],
+["PS1 AF2 RGG", "FGS"], # S is phosphorothioate
+["PS1 LNA DTT", "LTS"],
+["PS1 OME RAA", "MAS"],
+["PS1 OME RGG", "NGS"],
+["PS1 OME DTT", "MTS"],
+["PS1 OME M5C", "MHS"],
 ]
 
 

@@ -19,7 +19,6 @@ LT      RNA
 LC      RNA
 LG      RNA
 LH      RNA
-EG      RNA
 LA5     RNA
 LT5     RNA
 LU5     RNA
@@ -117,6 +116,8 @@ MAS     RNA
 MUS     RNA
 MCS     RNA
 NGS     RNA
+MTS     RNA
+MHS     RNA
 MAS5    RNA
 MTS5    RNA
 MUS5    RNA
@@ -139,17 +140,9 @@ FU      RNA
 FGS     RNA
 LH5     RNA
 LHS     RNA
-EAS     RNA
-ECS     RNA
-EGS     RNA
-ETS     RNA
-ETS3    RNA
-EG5     RNA
-EHS     RNA
 FUS     RNA
 E3P     RNA
 NG3     RNA
-ET3     RNA
 L3P     RNA
 H5S     RNA
 C3L     RNA
